@@ -2,6 +2,14 @@ body {
 	background: #ECECEC;
 }
 
-.flexboxer > .wrap {
+#navtop {
+	background: deepskyblue;
+}
+
+#navleft {
+	background: #5FD694;
+}
+
+#main .flexboxer > .wrap {
     background: #f5f5f5;
 }
