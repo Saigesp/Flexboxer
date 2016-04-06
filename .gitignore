@@ -1,0 +1,9 @@
+/node_modules
+/bower_components
+/.tmp
+/.sass-cache
+
+*.sublime-project
+*.sublime-workspace
+
+**/sftp-config.json
