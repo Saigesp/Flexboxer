@@ -50,7 +50,11 @@ body {
 	margin-top: 10px;
 }
 
-.flexboxer > section:last-of-type{
+.flexboxer > .wrap:first-child{
+	margin-top: 0;
+}
+
+.flexboxer > .wrap:last-child{
 	margin-bottom: 0;
 }
 
