@@ -9,9 +9,13 @@ var pkg        = require('./package.json');
 
 /* Prepare banner text */
 var banner = ['/**',  
-  ' * <%= pkg.name %> v<%= pkg.version %>',
-  ' * <%= pkg.description %>',
-  ' * <%= pkg.author.name %> <<%= pkg.author.email %>>',
+  ' * Project: <%= pkg.name %> ',
+  ' * Version: v<%= pkg.version %>',
+  ' * Description: <%= pkg.description %>',
+  ' * Author: <%= pkg.author.name %>',
+  ' * Author email: <%= pkg.author.email %>',
+  ' * Licence: <%= pkg.license %>',
+  ' * Web: <%= pkg.homepage %>',
   ' */',
   ''].join('\n');
 

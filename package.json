@@ -16,7 +16,10 @@
     "framework",
     "responsive"
   ],
-  "author": "Saigesp",
+  "author": {
+    "name": "Saigesp",
+    "email": "saigesp@saigesp.es"
+    },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Saigesp/Flexboxer/issues"
