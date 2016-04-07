@@ -20,7 +20,7 @@ var banner = ['/**',
   ''].join('\n');
 
 /* Task to compile less */
-gulp.task('compile-less', function() {  
+gulp.task('less', function() {  
   gulp.src('./dev/*.less')
     .pipe(less())
     .pipe(header(banner, {pkg: pkg}))
@@ -28,12 +28,12 @@ gulp.task('compile-less', function() {
 });
 
 /* Task to watch less changes */
-gulp.task('watch-less', function() {  
-  gulp.watch('./*.less' , ['compile-less']);
+gulp.task('watch-less', ['less'], function() {  
+  gulp.watch('./dev/*.less' , ['less']);
 });
 
 /* Task to minify css */
-gulp.task('minify-css', ['compile-less'], function() {  
+gulp.task('minify-css', ['less'], function() {  
   gulp.src('./dist/*.css')
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
@@ -41,7 +41,7 @@ gulp.task('minify-css', ['compile-less'], function() {
 });
 
 /* Task when running `gulp` from terminal */
-gulp.task('default', ['compile-less', 'watch-less']);
+gulp.task('server', ['watch-less']);
 
 /* Task when running `gulp build` from terminal */
 gulp.task('build', ['minify-css']);  
