@@ -3,14 +3,14 @@ Small super-responsive CSS framework to structure simple web pages based on **fl
 
 Build with **LESS** and **Gulp**
 
-## Install & use
+### Install & use
 To clone files to you local machine, run:
 ```
 git clone https://github.com/Saigesp/Flexboxer.git
 ```
 Now you can open any HTML demo file from `dist/demo`
 
-## Compile files
+### Compile files
 To **compile** LESS files, run:
 ```
 gulp less
@@ -23,6 +23,7 @@ To **build** a minified CSS file, run:
 ```
 gulp build
 ```
+----------
 
 ## Page structure
 Flexboxer provides a simply page structure, divided in **boxes** and **wrappers**.
