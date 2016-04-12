@@ -1,7 +1,7 @@
 # Flexboxer
-Small super-responsive CSS framework to structure simple web pages based on **flexbox**.
+Small super-responsive CSS framework to structure simple web pages based on **flexbox**. Build with **LESS** and **Gulp**.
 
-Build with **LESS** and **Gulp**
+[Demo](http://saigesp.es/demo/flexboxer/demo/demo1.html)
 
 ### Install & use
 To clone files to you local machine, run:
