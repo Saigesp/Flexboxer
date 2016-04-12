@@ -1,7 +1,33 @@
 # Flexboxer
 Small super-responsive CSS framework to structure simple web pages based on **flexbox**.
 
+Build with **LESS** and **Gulp**
+
+## Install
+To clone files to you local machine, run:
+```
+git clone https://github.com/Saigesp/Flexboxer.git
+```
+To **compile** LESS files, run:
+```
+gulp less
+```
+To **watch** LESS files and compilie it when they change, run:
+```
+gulp watch
+```
+To **build** a minified CSS file, run:
+```
+gulp build
+```
+
 ## Page structure
+Flexboxer provides a simply page structure, divided in **boxes** and **wrappers**.
+
+**Boxes** are the main section structure, and they split the content in rows.
+**Wrappers** are the subvidivers ob boxes, which works ina similar way to columns.
+
+### General page structure
 ```
 <body>
 	<div id="navtop"></div>
@@ -11,9 +37,9 @@ Small super-responsive CSS framework to structure simple web pages based on **fl
 	<div id="footer"></div>
 </body>
 ```
-Obviulsy, `nav` must contain an `ul`
-## Box structure
-Inside main, or directly in it, you can declare the box structure:
+
+### Box structure
+Inside `#main`, or directly in it, you can declare the box structure:
 ```
 <div class="flexboxer">
 	<section class="wrap wrap--content">
@@ -34,8 +60,8 @@ You can repeat it if you want:
 ```
 `wrap--frame` generates a box without padding, and `wrap--content` gives a simple padding to it's content.
 
-## Box dividers
-We need to compress boxs and restructure their content in a similar way to rows and columns, but with flexbox.
+### Wrappers (Box dividers)
+We need to compress boxs and restructure their content in a similar way to rows and columns, but with flexbox. The following example shows one box divided in two wraps with same width.
 ```
 <section class="wrap wrap--content wrap--shadow">										
 	<h1>Crear nuevo usuario</h1>
@@ -49,3 +75,4 @@ We need to compress boxs and restructure their content in a similar way to rows 
 	</div>
 </section>
 ```
+

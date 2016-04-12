@@ -41,7 +41,7 @@ gulp.task('minify-css', ['less'], function() {
 });
 
 /* Task when running `gulp` from terminal */
-gulp.task('server', ['watch-less']);
+gulp.task('serve', ['watch-less']);
 
 /* Task when running `gulp build` from terminal */
 gulp.task('build', ['minify-css']);  
