@@ -80,3 +80,8 @@ We need to compress boxs and restructure their content in a similar way to rows 
 </section>
 ```
 
+Item     | Value
+-------- | ---
+Computer | $1600
+Phone    | $12
+Pipe     | $1
