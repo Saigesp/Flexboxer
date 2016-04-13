@@ -78,6 +78,22 @@ h6 { font-size: 16px; line-height: 1.5;}
 		margin: 0;
     	line-height: @header-height;
 	}
+	.icon {
+		height: 30px;
+		width: 30px;
+		padding: 5px;
+		opacity: 0.9;
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: top;
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+	.logo {
+		display: inline-block;
+		vertical-align: top;
+	}
 }
 
 
@@ -157,17 +173,6 @@ h6 { font-size: 16px; line-height: 1.5;}
 	.wrap--frame  {
 		padding: 0;
 	    flex: 1 0 100%;
-	}
-	/* Divisors */
-	.wrap--content__middle,
-	.wrap--content__full {
-		flex: 1 0 calc(100% - @wrap-content-padding*2);
-		padding: @wrap-content-padding;
-	}
-	.wrap--frame__middle,
-	.wrap--frame__full {
-		flex: 1 0 100%;
-		padding: 0;
 	}
 	.wrap--frame__decim  {
     	flex: 1 1 10%;
@@ -465,6 +470,9 @@ h6 { font-size: 16px; line-height: 1.5;}
 		h2 {
 			margin: 0;
 	    	line-height: @header-height-desktop;
+		}
+		.icon {
+			padding: 15px;
 		}
 	}
 	.menu--side {

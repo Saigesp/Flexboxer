@@ -80,8 +80,14 @@ We need to compress boxs and restructure their content in a similar way to rows 
 </section>
 ```
 
-Item     | Value
--------- | ---
-Computer | $1600
-Phone    | $12
-Pipe     | $1
+
+#### List of Dividers
+Class     | Wrap
+--------- | ---
+wrap--content__middle | 50% of space, with padding
+wrap--content__full | 100% of space, with padding
+wrap--content__toframe | 100% of space, padding only in small sizes
+wrap--frame__middle | 50% of space, no padding
+wrap--frame__decim | 10% of space, no padding
+
+//TODO: Extend dividers
