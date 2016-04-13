@@ -52,7 +52,7 @@ Inside `#main`, or directly in it, you can declare the box structure:
 </div>
 ```
 You can repeat it if you want:
-```
+```html
 <div class="flexboxer">
 	<section class="wrap wrap--frame">
 		// Box 1
