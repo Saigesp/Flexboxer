@@ -76,6 +76,13 @@ h6 {
   font-size: 16px;
   line-height: 1.5;
 }
+.sep {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
 /**
  * NAVTOP
  ***********************************/
@@ -115,28 +122,27 @@ h6 {
 .menu--side {
   position: absolute;
   top: 40px;
-  max-width: 260px;
+  width: 220px;
 }
 .menu--side .itemlist {
   font-size: 1.6rem;
-  padding: 10px 0;
 }
 .menu--side .itemlist:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 .menu--side .itemlist a {
-  padding: 10px 20px;
+  padding: 15px 20px;
   text-decoration: none;
   color: white;
 }
 .menu--side__left {
-  left: -260px;
+  left: -220px;
 }
 .menu--side__left.active {
   left: 0;
 }
 .menu--side__right {
-  right: -260px;
+  right: -220px;
 }
 .menu--side__right.active {
   right: 0;
@@ -191,6 +197,10 @@ h6 {
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
+  -webkit-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
+  -moz-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
+  -o-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
+  transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
   /* Icon close */
 }
 .flexboxer > .wrap:first-child {
@@ -299,31 +309,39 @@ h6 {
 .wrap--form input[type="submit"],
 .wrap--form button {
   margin: 0;
-  padding: 0 10px 1px;
+  padding: 10px 20px;
   min-height: 35px;
   cursor: pointer;
+  border: 0;
   font-size: inherit;
-  border-width: 1px;
-  border-style: solid;
   -webkit-appearance: none;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
   white-space: nowrap;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: white;
-  background: #28b4b8;
-  border-color: #22999b;
-  -webkit-box-shadow: 0 1px 0 #22999b;
-  box-shadow: 0 1px 0 #22999b;
+  color: #245A3C;
+  background: #5FD694;
+  border-bottom: 5px solid #46A26F;
   text-decoration: none;
-  text-shadow: 0 -1px 1px #22999b, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #22999b;
-  transition: all 300ms ease;
+  transition: all 200ms ease;
 }
 .wrap--form input[type="submit"]:hover,
 .wrap--form button:hover {
-  background-color: #22999b;
+  background: #55BD83;
+}
+.wrap--form input[type="submit"]:active,
+.wrap--form button:active {
+  border-bottom: 1px solid #46A26F;
+  margin-top: 4px;
+}
+.wrap--form input[type="submit"]:disabled,
+.wrap--form button:disabled {
+  border-bottom: 1px solid #46A26F;
+  margin-top: 4px;
+  opacity: 0.4;
+  cursor: default;
 }
 .wrap--form select {
   background: rgba(0, 0, 0, 0.1);
@@ -361,54 +379,50 @@ h6 {
 }
 .button {
   margin: 0;
-  padding: 0 10px 1px;
+  padding: 10px 20px;
   min-height: 35px;
   cursor: pointer;
+  border: 0;
   font-size: inherit;
-  border-width: 1px;
-  border-style: solid;
   -webkit-appearance: none;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
   white-space: nowrap;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: white;
-  background: #28b4b8;
-  border-color: #22999b;
-  -webkit-box-shadow: 0 1px 0 #22999b;
-  box-shadow: 0 1px 0 #22999b;
+  color: #245A3C;
+  background: #5FD694;
+  border-bottom: 5px solid #46A26F;
   text-decoration: none;
-  text-shadow: 0 -1px 1px #22999b, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #22999b;
-  transition: all 300ms ease;
+  transition: all 200ms ease;
   padding: 5px 12px;
 }
 .button:hover {
   background-color: #22999b;
 }
+.button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
 .button-secondary {
   margin: 0;
-  padding: 0 10px 1px;
+  padding: 10px 20px;
   min-height: 35px;
   cursor: pointer;
+  border: 0;
   font-size: inherit;
-  border-width: 1px;
-  border-style: solid;
   -webkit-appearance: none;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
   white-space: nowrap;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: white;
-  background: #28b4b8;
-  border-color: #22999b;
-  -webkit-box-shadow: 0 1px 0 #22999b;
-  box-shadow: 0 1px 0 #22999b;
-  text-shadow: 0 -1px 1px #22999b, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #22999b;
-  transition: all 300ms ease;
+  color: #245A3C;
+  background: #5FD694;
+  border-bottom: 5px solid #46A26F;
+  transition: all 200ms ease;
   background-color: rgba(0, 0, 0, 0.2);
   border-color: #BBB;
   -webkit-box-shadow: 0 1px 0 #BBB;
@@ -457,6 +471,20 @@ h6 {
     flex: 1 0 calc(0%);
     margin-left: 10px;
   }
+  .flexboxer .wrap--frame__third {
+    flex: 1 0 33%;
+  }
+  .flexboxer .wrap--frame__third + .wrap--frame__middle {
+    flex: 1 0 calc(23%);
+    margin-left: 10px;
+  }
+  .flexboxer .wrap--content__third {
+    flex: 1 0 calc(-7%);
+  }
+  .flexboxer .wrap--content__third + .wrap--frame__middle {
+    flex: 1 0 calc(23%);
+    margin-left: 10px;
+  }
   .wrap--form input {
     min-width: initial;
   }
@@ -493,16 +521,18 @@ h6 {
   .flexboxer .wrap--flex {
     flex-wrap: nowrap;
   }
-  .flexboxer .wrap--content {
-    max-width: 860px;
-    margin: 10px auto;
-  }
+  .flexboxer .wrap--content,
   .flexboxer .wrap--frame {
-    max-width: 900px;
     margin: 10px auto;
   }
   .flexboxer .wrap--content__toframe {
     padding: 0;
+  }
+  .flexboxer > .wrap--content {
+    max-width: calc(860px);
+  }
+  .flexboxer > .wrap--frame,
+  .flexboxer > .wrap--content__toframe {
     max-width: 900px;
   }
   .flexboxer .wrap--content__fullwidth {
@@ -512,13 +542,25 @@ h6 {
 }
 @media only screen and (min-width: 1220px) {
   #main {
-    margin-left: 260px;
+    margin-left: 220px;
   }
   .menu--side {
     left: 0;
   }
   .menu--side a {
     display: block;
+  }
+  .wrap--navtop .icon--menu__left {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .flexboxer > .wrap--content {
+    max-width: calc(1060px);
+  }
+  .flexboxer > .wrap--frame,
+  .flexboxer > .wrap--content__toframe {
+    max-width: 1100px;
   }
 }
 /**
