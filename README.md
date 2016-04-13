@@ -32,7 +32,7 @@ Flexboxer provides a simply page structure, divided in **boxes** and **wrappers*
 **Wrappers** are the subvidivers ob boxes, which works ina similar way to columns.
 
 ### General page structure
-```
+```html
 <body>
 	<div id="navtop"></div>
 	<div id="main"></div>
@@ -44,7 +44,7 @@ Flexboxer provides a simply page structure, divided in **boxes** and **wrappers*
 
 ### Box structure
 Inside `#main`, or directly in it, you can declare the box structure:
-```
+```html
 <div class="flexboxer">
 	<section class="wrap wrap--content">
 		// Inside box
@@ -66,7 +66,7 @@ You can repeat it if you want:
 
 ### Wrappers (Box dividers)
 We need to compress boxs and restructure their content in a similar way to rows and columns, but with flexbox. The following example shows one box divided in two wraps with same width.
-```
+```html
 <section class="wrap wrap--content wrap--shadow">										
 	<h1>Crear nuevo usuario</h1>
 	<div class="wrap wrap--flex">
