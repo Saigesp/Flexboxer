@@ -1,7 +1,10 @@
 # Flexboxer
 Small super-responsive CSS framework to structure simple web pages based on **flexbox**. Build with **LESS** and **Gulp**.
 
-[Demo](http://saigesp.es/demo/flexboxer/demo/demo1.html)
+**Demo**:
+[Basic](http://saigesp.es/demo/flexboxer/demo/demo1.html)
+
+[Dragabble list](http://saigesp.es/demo/flexboxer/demo/demo2.html)
 
 ### Install & use
 To clone files to you local machine, run:
@@ -91,3 +94,50 @@ wrap--frame__middle | 50% of space, no padding
 wrap--frame__decim | 10% of space, no padding
 
 //TODO: Extend dividers
+
+----------
+
+## Altres
+
+#### Draggable list
+
+//TODO: Extend structure & implemennt basic drag&drop pluggin to test
+
+```html
+<ul class="list list--editmenu">
+    <li>
+        <div class="item item--editmenu">
+            <div class="childitem">
+                <span> [ texto 1 ] </span>
+                [ iconos ]
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="item item--editmenu">
+            <div class="childitem">
+                <span> [ texto 2 ] </span>
+                [ iconos ]
+            </div>
+            <ul>
+                <li>
+                    <div class="item item--editmenu">
+                        <div class="childitem">
+                            <span> [ texto 2.1 ]</span>
+                            [ iconos ]
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item item--editmenu">
+                        <div class="childitem">
+                            <span> [ texto 2.2 ] </span>
+                            [ iconos ]
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>
+```
