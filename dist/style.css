@@ -33,6 +33,12 @@ body {
 #main {
   position: relative;
 }
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 /**
  * TOOLS
  ***********************************/
@@ -270,6 +276,85 @@ h6 {
 }
 .wrap--flex + .wrap--flex {
   margin-top: 10px;
+}
+/**
+ * EDIT MENU
+ ***********************************/
+.list--editmenu {
+  font-size: 1.6rem;
+  line-height: 2;
+  margin-left: -20px;
+}
+.list--editmenu li {
+  margin: 5px 0;
+}
+.list--editmenu .item {
+  margin-left: 20px;
+  transition: background 200ms ease;
+}
+.list--editmenu .item .childitem {
+  position: relative;
+  padding: 0 10px;
+  line-height: 42px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+}
+.list--editmenu .item .childitem:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.list--editmenu .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: auto;
+  padding: 11px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.list--editmenu .icon:hover {
+  opacity: 0.9;
+}
+.list--editmenu .icon--remove {
+  right: 0;
+}
+.list--editmenu .icon--edit {
+  right: 42px;
+}
+.list--editmenu .icon--dragdrop {
+  right: 84px;
+  cursor: all-scroll;
+}
+/**
+ * TABLE
+ ***********************************/
+.wrap--table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+.wrap--table tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.1);
+}
+.wrap--table tr td {
+  padding: 0 10px;
+}
+.wrap--table tr td a {
+  text-decoration: none;
+}
+.wrap--table .icon {
+  width: 24px;
+  height: auto;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 200ms ease;
+}
+.wrap--table .icon:hover {
+  opacity: 0.9;
 }
 /**
  * FORMS
