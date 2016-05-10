@@ -1,0 +1,11 @@
+/node_modules
+/bower_components
+/.tmp
+/.sass-cache
+
+/dist/demo/*
+
+*.sublime-project
+*.sublime-workspace
+
+**/sftp-config.json
