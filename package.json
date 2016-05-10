@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/Saigesp/Flexboxer#readme",
   "dependencies": {
+  },
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-header": "^1.7.1",
     "gulp-less": "^3.0.5",
