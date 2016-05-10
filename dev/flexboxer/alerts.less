@@ -1,0 +1,18 @@
+
+/**
+ * ALERTS
+ ***********************************/
+.wrap--alert {
+	color: white;
+	font-size: 1.6rem;
+	&__error { background: @alert-color-error !important;}
+	&__success { background: @alert-color-success !important;}
+	&__warning { background: @alert-color-warning !important;}
+	&__info { background: @alert-color-info !important;}
+	p {
+		margin: 0;
+		+ p {
+			margin-top: 10px;
+		}
+	}
+}

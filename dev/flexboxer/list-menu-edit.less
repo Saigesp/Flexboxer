@@ -1,0 +1,77 @@
+/**
+ * LIST MENU EDIT
+ ***********************************/
+.list--editmenu {
+	font-size: 1.6rem;
+    line-height: 2;
+    margin-left: -20px;
+    li {
+		margin: 5px 0;
+    }
+    .item {
+    	margin-left: 20px;
+    	transition: background 200ms ease;
+    	.childitem {
+    		position: relative;
+    		padding: 0 10px;
+    		line-height: 42px;
+    		background: rgba(255, 255, 255, 0.2);
+			-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+			&:hover {
+				background: rgba(0,0,0,0.05);
+			}
+    	}
+    	.newitem {
+    		margin-left: 20px;
+    		opacity: 0;
+    		padding: 0;
+    		height: 0;
+    		overflow: hidden;
+    		line-height: 0;
+    		transition: all 200ms ease;
+    		background: rgba(0,0,0,0.1);
+    		&.active {
+    			padding: 10px;
+    			margin-bottom: 5px;
+    			line-height: 1;
+    			opacity: 1;
+    			height: auto;
+    		}
+    		h3 {
+			    font-size: 1.4rem;
+			    margin-bottom: 0;
+    		}
+    	}
+    }
+	.icon {
+		position: absolute;
+    	top: 0;
+    	right: 0;
+		width: 20px;
+		height: auto;
+		padding: 11px;
+		.box-sizing(content-box);
+		cursor: pointer;
+		opacity: 0.5;
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+	.icon--remove {
+		right: 0;
+	}
+	.icon--edit {
+		right: 42px;
+	}
+	.icon--dragdrop {
+		right: 84px;
+		cursor: all-scroll;
+	}
+	.icon--addmenu {
+	    position: static;
+	    top: initial;
+	    right: initial;
+	    vertical-align: top;
+	}
+}

@@ -1,0 +1,59 @@
+/**
+ * TABLES
+ ***********************************/
+
+.wrap--table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0;
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	tr {
+
+		&:nth-child(odd) {
+			background: rgba(0,0,0,0.1);
+		}
+		td {
+			padding: 0 10px;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	.icon {
+		width: 24px;
+		height: auto;
+		padding: 10px;
+		box-sizing: content-box;
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 200ms ease;
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+
+@media only screen and (min-width: @query-mobile) {
+
+}
+
+@media only screen and (min-width: @query-tablet) {
+
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+	.wrap--table {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+}

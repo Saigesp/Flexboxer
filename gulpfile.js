@@ -10,7 +10,7 @@ var pkg        = require('./package.json');
 /* Prepare banner text */
 var banner = ['/**',  
   ' * Project: <%= pkg.name %> ',
-  ' * Version: v<%= pkg.version %>',
+  ' * Version: v<%= pkg.version %>.2',
   ' * Description: <%= pkg.description %>',
   ' * Author: <%= pkg.author.name %>',
   ' * Author email: <%= pkg.author.email %>',
@@ -21,7 +21,7 @@ var banner = ['/**',
 
 /* Task to compile less */
 gulp.task('less', function() {  
-  gulp.src('./dev/*.less')
+  gulp.src('./dev/style.less')
     .pipe(less())
     .pipe(header(banner, {pkg: pkg}))
     .pipe(gulp.dest('./dist/'));

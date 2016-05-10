@@ -1,0 +1,28 @@
+
+/**
+ * ANIMATIONS
+ ***********************************/
+.animecubic350 {
+    -webkit-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
+    -moz-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
+    -o-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
+    transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
+}
+
+.fadein100 {
+    -webkit-animation: fadeIn100 0.7s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition: all 500ms ease-out;
+    pointer-events: all !important;
+}
+
+@-webkit-keyframes fadeIn100 {
+    from {
+        margin-top: -50px;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}

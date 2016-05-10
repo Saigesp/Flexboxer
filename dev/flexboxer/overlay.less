@@ -1,0 +1,23 @@
+/**
+ * OVERLAY
+ ***********************************/
+.overlay {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    width: 5000px;
+    height: 5000px;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    pointer-events: none;
+    transition: all 350px ease;
+    opacity: 0;
+    &.active{
+	    -webkit-animation: fadeIn100 0.7s;
+	    -webkit-animation-iteration-count: 1;
+	    -webkit-animation-fill-mode: forwards;
+	    -webkit-transition: all 500ms ease-out;
+	    pointer-events: all !important;
+	    opacity: 1;
+    }
+}

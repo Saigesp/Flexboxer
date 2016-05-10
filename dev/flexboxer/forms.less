@@ -1,0 +1,109 @@
+/**
+ * FORMS
+ ***********************************/
+#basicinput() {
+	background: rgba(0,0,0,0.1);
+	padding: 5px;
+	border: 0;
+	transition: background 500ms ease;
+	min-height: 45px;
+	min-width: 45px;
+	width: 100%;
+	font-size: inherit;
+	box-sizing: border-box;
+}
+
+.wrap--form {
+	font-size: 1.6rem;
+	input {
+		#basicinput;
+		&:required{
+			&.ng-dirty.ng-invalid,
+      &.invalid-important {
+				border-left: 5px solid red !important;
+			}
+			&.ng-dirty.ng-valid {
+				border-left: 5px solid green;
+			}
+		}
+	}
+	input[type="checkbox"] {
+		min-height: 35px;
+		min-width: 35px;
+		vertical-align: middle;
+		width: auto;
+		+ label {
+			margin-left: 5px;
+		}
+		&:checked +  label {
+			font-weight: 700;
+		}
+	}
+	select{
+		#basicinput;
+		font-size: 1.4rem;
+		width: 100%;
+		min-height: 55px;
+		option {
+			font-size: inherit;
+		}
+		&:required.ng-dirty.ng-invalid {
+			border-left: 5px solid red;
+		}
+		&:required.ng-dirty.ng-valid {
+			border-left: 5px solid green;
+		}
+	}
+	label {
+		min-height: 45px;
+		line-height: 45px;
+		cursor: pointer;
+		font-size: inherit;
+	}
+	.alert{
+		font-size: 1.4rem;
+		&.alert-danger {
+			color: red;
+		}
+	}
+	.wrap--submit {
+		min-height: 47px;
+	}
+}
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+
+@media only screen and (min-width: @query-mobile) {
+
+	.wrap--form {
+		input {
+			min-width: initial;
+		}
+		select {
+			min-height: 45px;
+		}
+		input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+		input[type="radio"] {
+			display: inline-block;
+			width: auto;
+		}
+	}
+}
+
+@media only screen and (min-width: @query-tablet) {
+
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
+}
