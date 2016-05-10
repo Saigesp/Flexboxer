@@ -1,0 +1,68 @@
+
+/**
+ * VIDEO COVER
+ ***********************************/
+.wrap--cover {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin: 0 !important;
+    border: none;
+    &__back {
+        position: relative;
+        video {
+            display: none;
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left: 0;
+            min-width: 100%;
+            max-width: initial;
+            &.fullwidth {
+                width: 100%;
+            }
+        }
+        .novideo {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    &__front {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        text-align: center;
+        color: white;
+        .logo {
+            width: 100%;
+            max-width: 300px;
+            margin-top: 100px;
+        }
+        p {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+
+@media only screen and (min-width : 780px) {
+    .wrap--cover {
+        video {
+            display: block;
+        }
+    }
+}
