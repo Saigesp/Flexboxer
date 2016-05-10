@@ -1,6 +1,6 @@
 {
   "name": "flexboxer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ultra responsive CSS Framework based on flex display",
   "main": "index.js",
   "scripts": {
@@ -19,14 +19,13 @@
   "author": {
     "name": "Saigesp",
     "email": "saigesp@saigesp.es"
-    },
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Saigesp/Flexboxer/issues"
   },
   "homepage": "https://github.com/Saigesp/Flexboxer#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-header": "^1.7.1",
