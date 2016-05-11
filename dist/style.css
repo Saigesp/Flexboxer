@@ -1,6 +1,6 @@
 /**
  * Project: flexboxer 
- * Version: v0.1.0.2
+ * Version: v0.1.2.2
  * Description: Ultra responsive CSS Framework based on flex display
  * Author: Saigesp
  * Author email: saigesp@saigesp.es
@@ -438,7 +438,7 @@ body {
   top: 0;
   left: 0;
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: #D9D9D9;
 }
 #main {
   position: relative;
@@ -450,15 +450,15 @@ body {
   width: 100%;
 }
 #header {
-  background: transparent;
+  background: #404E5C;
   color: white;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 #navleft {
-  background: #FFFFFF;
+  background: #4F6272;
 }
 #main .flexboxer > .wrap {
-  background: transparent;
+  background: #F5F5F5;
 }
 .flexboxer {
   display: flex;
@@ -703,12 +703,12 @@ body {
 }
 @media only screen and (min-width: 1120px) {
   body {
-    background: #FFFFFF;
+    background: #4F6272;
   }
   #main,
   .wrap--footer {
     margin-left: 220px;
-    background: #FFFFFF;
+    background: #D9D9D9;
   }
   #main {
     min-height: calc(100% - 60px);
@@ -817,6 +817,7 @@ h6 {
 .wrap--header .logo {
   display: inline-block;
   vertical-align: top;
+  margin-left: 40px;
 }
 .wrap--header .title {
   margin: 0;
@@ -849,11 +850,14 @@ h6 {
 .wrap--header .icon--menu__right {
   right: 0;
 }
+.wrap--header .icon--user {
+  padding: 0;
+}
 /**
  * NAV TOP
  ***********************************/
 .menu--top {
-  background: #FFFFFF;
+  background: #4F6272;
   width: 100%;
   height: 0;
   padding-top: 0;
@@ -898,9 +902,6 @@ h6 {
   text-decoration: none;
   color: white;
 }
-/**
- * NAV LEFT
- ***********************************/
 .menu--side__left {
   left: -220px;
 }
@@ -908,9 +909,6 @@ h6 {
   left: -20px;
   padding-left: 20px;
 }
-/**
- * NAV RIGHT
- ***********************************/
 .menu--side__right {
   right: -220px;
 }
@@ -928,6 +926,9 @@ h6 {
     margin: 0;
     line-height: 60px;
   }
+  .wrap--header .logo {
+    margin-left: 60px;
+  }
   .wrap--header .logo .title {
     font-size: 2.4rem;
     line-height: 60px;
@@ -935,12 +936,15 @@ h6 {
   .wrap--header .icon {
     padding: 15px;
   }
+  .wrap--header .icon--user {
+    padding: 0;
+  }
   .menu--side {
     top: 60px;
   }
 }
 @media only screen and (min-width: 1120px) {
-  .wrap--header .icon--menu {
+  .wrap--header .icon--hamburguer {
     display: none;
   }
   .wrap--header .logo {
@@ -1136,7 +1140,7 @@ button.secondary:focus {
   opacity: 0.4;
   cursor: default;
 }
-.button-secondary {
+.button--secondary {
   margin: 0;
   padding: 10px 20px;
   min-height: 35px;
@@ -1162,7 +1166,7 @@ button.secondary:focus {
   text-decoration: none;
   text-shadow: none;
 }
-.button-secondary:hover {
+.button--secondary:hover {
   background-color: #BBB;
 }
 /**
@@ -1175,7 +1179,7 @@ button.secondary:focus {
   background: rgba(0, 0, 0, 0.1);
   padding: 5px;
   border: 0;
-  transition: background 500ms ease;
+  transition: all 200ms ease;
   min-height: 45px;
   min-width: 45px;
   width: 100%;
@@ -1190,22 +1194,92 @@ button.secondary:focus {
   border-left: 5px solid green;
 }
 .wrap--form input[type="checkbox"] {
-  min-height: 35px;
-  min-width: 35px;
-  vertical-align: middle;
-  width: auto;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
 .wrap--form input[type="checkbox"] + label {
+  display: inline-block;
   margin-left: 5px;
+  height: 45px;
+  min-height: initial;
+  min-width: 45px;
+  line-height: normal;
+  border-bottom: 5px solid #999;
+  background-color: #DDD;
+  background-size: 33px;
+  background-position-x: 5px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: all 200ms ease;
+  line-height: 45px;
+  font-size: 1.6rem;
+  background-image: url('../images/manager/icons/check-grey.svg');
+}
+.wrap--form input[type="checkbox"] + label:hover {
+  background-color: #AAA;
+  color: white;
+}
+.wrap--form input[type="checkbox"] + label span {
+  margin: 0 15px 0 45px;
+}
+.wrap--form input[type="checkbox"]:focus + label {
+  color: white;
 }
 .wrap--form input[type="checkbox"]:checked + label {
-  font-weight: 700;
+  background-color: #BBB;
+  background-image: url('../images/manager/icons/check.svg');
+  border-bottom-width: 1px;
+  margin-top: 4px;
+}
+.wrap--form input[type="radio"] {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.wrap--form input[type="radio"] + label {
+  display: inline-block;
+  margin-left: 5px;
+  height: 45px;
+  min-height: initial;
+  min-width: 45px;
+  line-height: normal;
+  border-bottom: 5px solid #999;
+  background-color: #DDD;
+  background-size: 33px;
+  background-position-x: 5px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: all 200ms ease;
+  line-height: 45px;
+  font-size: 1.6rem;
+  background-image: url('../images/manager/icons/radio-grey.svg');
+}
+.wrap--form input[type="radio"] + label:hover {
+  background-color: #AAA;
+  color: white;
+}
+.wrap--form input[type="radio"] + label span {
+  margin: 0 15px 0 45px;
+}
+.wrap--form input[type="radio"]:focus + label {
+  color: white;
+}
+.wrap--form input[type="radio"]:checked + label {
+  background-color: #BBB;
+  background-image: url('../images/manager/icons/radio.svg');
+  border-bottom-width: 1px;
+  margin-top: 4px;
 }
 .wrap--form select {
   background: rgba(0, 0, 0, 0.1);
   padding: 5px;
   border: 0;
-  transition: background 500ms ease;
+  transition: all 200ms ease;
   min-height: 45px;
   min-width: 45px;
   font-size: inherit;
@@ -1223,11 +1297,21 @@ button.secondary:focus {
 .wrap--form select:required.ng-dirty.ng-valid {
   border-left: 5px solid green;
 }
-.wrap--form label {
+.wrap--form textarea {
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  line-height: 2;
+}
+.wrap--form label,
+.wrap--form span {
   min-height: 45px;
   line-height: 45px;
-  cursor: pointer;
   font-size: inherit;
+}
+.wrap--form label {
+  cursor: pointer;
 }
 .wrap--form .alert {
   font-size: 1.4rem;
@@ -1235,8 +1319,12 @@ button.secondary:focus {
 .wrap--form .alert.alert-danger {
   color: red;
 }
-.wrap--form .wrap--submit {
+.wrap.wrap--submit {
   min-height: 47px;
+  text-align: right;
+}
+.wrap.wrap--checkbox {
+  min-height: 56px;
 }
 /**
  * MEDIA QUERYS
@@ -1247,14 +1335,6 @@ button.secondary:focus {
   }
   .wrap--form select {
     min-height: 45px;
-  }
-  .wrap--form input[type="checkbox"] {
-    display: inline-block;
-    width: auto;
-  }
-  .wrap--form input[type="radio"] {
-    display: inline-block;
-    width: auto;
   }
 }
 /**

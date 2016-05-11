@@ -5,7 +5,7 @@
 	background: rgba(0,0,0,0.1);
 	padding: 5px;
 	border: 0;
-	transition: background 500ms ease;
+	transition: all 200ms ease;
 	min-height: 45px;
 	min-width: 45px;
 	width: 100%;
@@ -13,61 +13,136 @@
 	box-sizing: border-box;
 }
 
-.wrap--form {
+#basiccheckbox() {
+	display: inline-block;
+	margin-left: 5px;
+	height: 45px;
+	min-height: initial;
+	min-width: 45px;
+	line-height: normal;
+	border-bottom: 5px solid #999;
+	background-color: #DDD;
+	background-size: 33px;
+	background-position-x: 5px;
+	background-position-y: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	transition: all 200ms ease;
+	line-height: 45px;
 	font-size: 1.6rem;
-	input {
-		#basicinput;
-		&:required{
-			&.ng-dirty.ng-invalid,
-      &.invalid-important {
-				border-left: 5px solid red !important;
+}
+
+.wrap{
+	&--form {
+		font-size: 1.6rem;
+		input {
+			#basicinput;
+			&:required{
+				&.ng-dirty.ng-invalid,
+	      &.invalid-important {
+					border-left: 5px solid red !important;
+				}
+				&.ng-dirty.ng-valid {
+					border-left: 5px solid green;
+				}
 			}
-			&.ng-dirty.ng-valid {
+		}
+		input[type="checkbox"] {
+			opacity: 0;
+			height: 0;
+			width: 0;
+			overflow: hidden;
+			+ label {
+					#basiccheckbox;
+					background-image: @icon-checkbox-grey;
+				&:hover {
+					background-color: #AAA;
+					color: white;
+				}
+				span {
+					margin: 0 15px 0 45px;
+				}
+			}
+			&:focus + label {
+				color: white;
+			}
+			&:checked + label {
+				background-color: #BBB;
+				background-image: @icon-checkbox;
+				border-bottom-width: 1px;
+				margin-top: 4px;
+			}
+		}
+		input[type="radio"] {
+			opacity: 0;
+			height: 0;
+			width: 0;
+			overflow: hidden;
+			+ label {
+				#basiccheckbox;
+				background-image: @icon-radio-grey;
+				&:hover {
+					background-color: #AAA;
+					color: white;
+				}
+				span {
+					margin: 0 15px 0 45px;
+				}
+			}
+			&:focus + label {
+				color: white;
+			}
+			&:checked + label {
+				background-color: #BBB;
+				background-image: @icon-radio;
+				border-bottom-width: 1px;
+				margin-top: 4px;
+			}
+		}
+		select{
+			#basicinput;
+			font-size: 1.4rem;
+			width: 100%;
+			min-height: 55px;
+			option {
+				font-size: inherit;
+			}
+			&:required.ng-dirty.ng-invalid {
+				border-left: 5px solid red;
+			}
+			&:required.ng-dirty.ng-valid {
 				border-left: 5px solid green;
 			}
 		}
-	}
-	input[type="checkbox"] {
-		min-height: 35px;
-		min-width: 35px;
-		vertical-align: middle;
-		width: auto;
-		+ label {
-			margin-left: 5px;
+		textarea {
+			width: 100%;
+			border: 0;
+			padding: 15px;
+			background: rgba(0,0,0,0.1);
+			line-height: 2;
 		}
-		&:checked +  label {
-			font-weight: 700;
-		}
-	}
-	select{
-		#basicinput;
-		font-size: 1.4rem;
-		width: 100%;
-		min-height: 55px;
-		option {
+		label,
+		span {
+			min-height: 45px;
+			line-height: 45px;
 			font-size: inherit;
 		}
-		&:required.ng-dirty.ng-invalid {
-			border-left: 5px solid red;
+		label {
+			cursor: pointer;
 		}
-		&:required.ng-dirty.ng-valid {
-			border-left: 5px solid green;
-		}
-	}
-	label {
-		min-height: 45px;
-		line-height: 45px;
-		cursor: pointer;
-		font-size: inherit;
-	}
-	.alert{
-		font-size: 1.4rem;
-		&.alert-danger {
-			color: red;
+		.alert{
+			font-size: 1.4rem;
+			&.alert-danger {
+				color: red;
+			}
 		}
 	}
-	.wrap--submit {
+	&&--submit {
 		min-height: 47px;
+		text-align: right;
+	}
+	&&--checkbox {
+		min-height: 56px;
 	}
 }
 
@@ -84,14 +159,6 @@
 		}
 		select {
 			min-height: 45px;
-		}
-		input[type="checkbox"] {
-			display: inline-block;
-			width: auto;
-		}
-		input[type="radio"] {
-			display: inline-block;
-			width: auto;
 		}
 	}
 }
