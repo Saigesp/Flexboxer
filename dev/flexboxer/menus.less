@@ -8,6 +8,7 @@
 	.logo {
 		display: inline-block;
 		vertical-align: top;
+		margin-left: @header-height;
 	}
 	.title {
 		margin: 0;
@@ -35,6 +36,9 @@
 		    top: 0;
 			&__left { left: 0;}
 			&__right { right: 0;}
+		}
+		&--user {
+			padding: 0;
 		}
 	}
 }
@@ -90,28 +94,21 @@
 			color: white;
 		}
 	}
-}
-
- /**
- * NAV LEFT
- ***********************************/
-.menu--side__left {
-	left: -@menu-side-width;
-	&.active {
-		left: -20px;
-    	padding-left: 20px;
+	&__left {
+		left: -@menu-side-width;
+		&.active {
+			left: -20px;
+	    	padding-left: 20px;
+		}
+	}
+	&__right {
+		right: -@menu-side-width;
+		&.active {
+			right: 0
+		}
 	}
 }
 
- /**
- * NAV RIGHT
- ***********************************/
-.menu--side__right {
-	right: -@menu-side-width;
-	&.active {
-		right: 0
-	}
-}
 
 
 /**
@@ -130,12 +127,18 @@
 			margin: 0;
 	    	line-height: @header-height-desktop;
 		}
-		.logo .title {
-			font-size: 2.4rem;
-			line-height: @header-height-desktop;
-		}
+		.logo {
+			margin-left: @header-height-desktop;
+			.title {
+				font-size: 2.4rem;
+				line-height: @header-height-desktop;
+				}
+			}
 		.icon {
 			padding: 15px;
+			&--user {
+				padding: 0;
+			}
 		}
 	}
 
@@ -146,7 +149,7 @@
 
 @media only screen and (min-width: @query-desktop) {
 	.wrap--header {
-		.icon--menu {
+		.icon--hamburguer {
 			display: none;
 		}
 		.logo {

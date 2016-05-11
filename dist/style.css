@@ -1,6 +1,6 @@
 /**
  * Project: flexboxer 
- * Version: v0.1.0.2
+ * Version: v0.1.2.2
  * Description: Ultra responsive CSS Framework based on flex display
  * Author: Saigesp
  * Author email: saigesp@saigesp.es
@@ -817,6 +817,7 @@ h6 {
 .wrap--header .logo {
   display: inline-block;
   vertical-align: top;
+  margin-left: 40px;
 }
 .wrap--header .title {
   margin: 0;
@@ -848,6 +849,9 @@ h6 {
 }
 .wrap--header .icon--menu__right {
   right: 0;
+}
+.wrap--header .icon--user {
+  padding: 0;
 }
 /**
  * NAV TOP
@@ -898,9 +902,6 @@ h6 {
   text-decoration: none;
   color: white;
 }
-/**
- * NAV LEFT
- ***********************************/
 .menu--side__left {
   left: -220px;
 }
@@ -908,9 +909,6 @@ h6 {
   left: -20px;
   padding-left: 20px;
 }
-/**
- * NAV RIGHT
- ***********************************/
 .menu--side__right {
   right: -220px;
 }
@@ -928,6 +926,9 @@ h6 {
     margin: 0;
     line-height: 60px;
   }
+  .wrap--header .logo {
+    margin-left: 60px;
+  }
   .wrap--header .logo .title {
     font-size: 2.4rem;
     line-height: 60px;
@@ -935,12 +936,15 @@ h6 {
   .wrap--header .icon {
     padding: 15px;
   }
+  .wrap--header .icon--user {
+    padding: 0;
+  }
   .menu--side {
     top: 60px;
   }
 }
 @media only screen and (min-width: 1120px) {
-  .wrap--header .icon--menu {
+  .wrap--header .icon--hamburguer {
     display: none;
   }
   .wrap--header .logo {
@@ -1222,6 +1226,13 @@ button.secondary:focus {
 }
 .wrap--form select:required.ng-dirty.ng-valid {
   border-left: 5px solid green;
+}
+.wrap--form textarea {
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  line-height: 2;
 }
 .wrap--form label {
   min-height: 45px;
