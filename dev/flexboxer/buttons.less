@@ -6,6 +6,7 @@
 	margin: 0;
     padding: 10px 20px;
     min-height: 35px;
+    min-width: 100%;
     cursor: pointer;
     border: 0;
     font-size: inherit;
@@ -87,4 +88,30 @@ button {
 	    	background-color: #BBB;
 	    }
 	}
+}
+
+
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+@media only screen and (min-width: @query-mobile) {
+
+}
+
+@media only screen and (min-width: @query-tablet) {
+	input[type="submit"],
+	button,
+	.button {
+		min-width: 220px;
+	}
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
 }
