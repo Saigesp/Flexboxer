@@ -93,12 +93,27 @@ body {
 		}
 		&--controls {
 			line-height: 1;
+			min-height: 60px;
 			.coollink {
 				height: 45px;
 		    	display: inline-block;
-		    	opacity: 0.6;
-		    	transition: background 200ms ease;
+		    	margin: 0 0 10px;
+		    	transition: all 200ms ease;
 		    	cursor: pointer;
+				background: @button-color-secondary;
+				border-bottom: 5px solid rgba(0,0,0,0.3);
+				color: black;
+				&:hover{
+					background: @button-hover-secondary;
+				}
+				&:focus {
+					color: rgba(255,255,255,1);
+					outline: 0;
+				}
+				&:active {
+					border-bottom-width: 1px;
+					margin-top: 4px;
+				}
 				.icon {
 					width: 30px;
 					height: auto;
@@ -111,11 +126,7 @@ body {
 					vertical-align: top;
 					line-height: 35px;
 					padding: 5px 10px 5px 0;
-					color: black;
-				}
-				&:hover {
-					background: rgba(0,0,0,0.1);
-					opacity: 1;
+					color: inherit;
 				}
 			}
 		}
@@ -331,23 +342,17 @@ body {
 		    	display: inline-block;
 		    	width: 385px;
 	    		margin-bottom: 5px;
-		    	opacity: 1;
+	    		border-bottom-width: 0;
 		    	background: white;
 	    		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
-	    		&--adduser {
-	    			background: @button-color-primary;
-	    			&:hover {
-	    				background: @button-shadow-primary;
-	    				color: @button-text-primary;
-	    			}
-	    		}
-	    		&--back {
-	    			background: @button-color-secondary;
-	    			&:hover {
-	    				background: @button-shadow-secondary;
-	    				color: @button-text-secondary;
-	    			}
-	    		}
+	    		background-color: @button-color-secondary;
+	    		&:hover{
+					background-color: @button-color-secondary;
+				}
+				&:active {
+					border-bottom-width: 0;
+					margin-top: 0;
+				}
 			}
 			&:hover {
 				left: -@buttons-lat-width;

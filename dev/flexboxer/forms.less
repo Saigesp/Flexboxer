@@ -13,11 +13,11 @@
 	box-sizing: border-box;
 }
 
-#basiccheckbox() {
+#basiccheckboxlabel() {
 	display: inline-block;
-	margin-left: 5px;
 	height: 45px;
 	min-height: initial;
+	width: 100%;
 	min-width: 45px;
 	line-height: normal;
 	border-bottom: 5px solid #999;
@@ -30,6 +30,15 @@
 	transition: all 200ms ease;
 	line-height: 45px;
 	font-size: 1.6rem;
+}
+
+#basiccheckbox() {
+	opacity: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	position: absolute;
+	pointer-events: none;
 }
 
 .wrap{
@@ -48,12 +57,9 @@
 			}
 		}
 		input[type="checkbox"] {
-			opacity: 0;
-			height: 0;
-			width: 0;
-			overflow: hidden;
+			#basiccheckbox;
 			+ label {
-					#basiccheckbox;
+					#basiccheckboxlabel;
 					background-image: @icon-checkbox-grey;
 				&:hover {
 					background-color: #AAA;
@@ -74,12 +80,9 @@
 			}
 		}
 		input[type="radio"] {
-			opacity: 0;
-			height: 0;
-			width: 0;
-			overflow: hidden;
+			#basiccheckbox;
 			+ label {
-				#basiccheckbox;
+				#basiccheckboxlabel;
 				background-image: @icon-radio-grey;
 				&:hover {
 					background-color: #AAA;
@@ -152,7 +155,6 @@
  *************************************************************************************************/
 
 @media only screen and (min-width: @query-mobile) {
-
 	.wrap--form {
 		input {
 			min-width: initial;
@@ -164,7 +166,12 @@
 }
 
 @media only screen and (min-width: @query-tablet) {
-
+	.wrap--form {
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			width: auto;
+		}
+	}
 }
 
 @media only screen and (min-width: @query-desktop) {
