@@ -17,6 +17,7 @@
     z-index: 9999;
     font-size: 1.6rem;
     pointer-events: none !important;
+    background-color: @sections-color;
     &.active{
 	    -webkit-animation: fadeIn100 0.7s;
 	    -webkit-animation-iteration-count: 1;
@@ -25,7 +26,7 @@
 	    pointer-events: all !important;
 	    opacity: 1;
     }
-    h3 {
+    h3:first-of-type {
     	margin-top: 0;
     }
     input[type="submit"] {

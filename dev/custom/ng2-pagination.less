@@ -1,0 +1,46 @@
+/**
+ * PAGINATION
+ ***********************************/
+.pagination {
+    text-align: center;
+    .custom-pagination {
+        > div {
+            display: inline-block;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: black;
+            &:hover {
+                background-color: rgba(0,0,0,0.1);
+            }
+            &.current {
+                background: @menu-color;
+                cursor: default;
+                color: white;
+                &:hover {
+                    background: @menu-color;
+                }
+            }
+            a:hover {
+                color: inherit;
+            }
+            span{
+                min-width: 40px;
+                display: block;
+                line-height: 40px;
+            }
+        }
+        .pagination-previous a {
+            min-width: 40px;
+            display: block;
+            line-height: 40px;
+        }
+        .pagination-next a {
+            min-width: 40px;
+            display: block;
+            line-height: 40px;
+        }
+    }
+    #server {
+        line-height: 0;
+    }
+}

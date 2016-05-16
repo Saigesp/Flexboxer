@@ -77,16 +77,18 @@ button {
 	}
 	&--secondary {
 		#basicbutton;
-		background-color: rgba(0,0,0,0.2);
-		border-color: #BBB;
-	    -webkit-box-shadow: 0 1px 0 #BBB;
-	    box-shadow: 0 1px 0 #BBB;
-	    color: #eee;
+		background: @button-color-secondary;
+		border-color: @button-shadow-secondary;
+		color: @button-text-secondary;
 	    text-decoration: none;
 	    text-shadow: none;
-	    &:hover {
-	    	background-color: #BBB;
-	    }
+		&:hover{
+			background: @button-hover-secondary;
+			color: white;
+		}
+		&:focus {
+			color: rgba(255,255,255,0.8);
+		}
 	}
 }
 

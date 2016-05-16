@@ -1,10 +1,23 @@
 /**
  * LISTS
  ***********************************/
-.list--users{
+.list{
 	width: 100%;
 	font-size: 1.4rem;
 	line-height: 26px;
+	&--scroll {
+		border: 1px solid rgba(0,0,0,0.1);
+		&__x {
+			max-width: 100%;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}
+		&__y {
+			max-height: 300px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+	}
 	> .wrap--flex {
 		margin: 0;
 		padding: 5px 10px;
@@ -13,6 +26,7 @@
 		}
 		.wrap--buttons {
 			line-height: 0;
+			text-align: right;
 		}
 		&:nth-child(odd) {
 			background: rgba(0,0,0,0.1);
@@ -20,9 +34,6 @@
 		+ .wrap--flex {
 			margin: 0;
 		}
-	}
-	a {
-		text-decoration: none;
 	}
 	.icon {
 		width: 24px;
@@ -35,5 +46,15 @@
 		&:hover {
 			opacity: 0.9;
 		}
+	}
+	a {
+		text-decoration: none;
+	}
+	input[type="checkbox"] + label {
+		width: 35px;
+		height: 35px;
+		min-width: 35px;
+		background-size: 24px;
+		background-color: white;
 	}
 }
