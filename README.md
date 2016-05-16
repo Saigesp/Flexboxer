@@ -36,7 +36,7 @@ Flexboxer provides a simply page structure, divided in **boxes** and **wrappers*
 ### General page structure
 ```html
 <body>
-	<div id="navtop"></div>
+	<div id="header"></div>
 	<div id="main"></div>
 	<div id="navleft"></div>
 	<div id="navright"></div>
