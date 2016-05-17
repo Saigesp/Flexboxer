@@ -18,8 +18,16 @@
 			overflow-x: hidden;
 		}
 	}
-	> .wrap--flex {
-		margin: 0;
+	&--toselect {
+		.itemlist {
+			cursor: pointer;
+			&--active {
+				background-color: @button-color-secondary !important;
+			}
+		}
+	}
+	> .wrap--flex { /* Cambiar por itemlist */
+		margin: 0 !important;
 		padding: 5px 10px;
 		.wrap {
 			line-height: 44px;
