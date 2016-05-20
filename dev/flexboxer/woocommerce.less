@@ -1,0 +1,126 @@
+.flexboxer--archive__product {
+	.wrap {
+		&--masonry {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			.item {
+				flex: 0 1 100% ;
+				margin: 15px;
+				background: white;
+				> .wrap--frame {margin: 0}
+				> .wrap--content {margin: 0}
+				.wrap--thumb {
+					overflow: hidden;
+					transition: height 200ms ease-in-out;
+					position: relative;
+					.button {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: ~"calc(100% - 100px)";
+						min-width: initial;
+						margin: 50px 50px 20px;
+						padding: 0;
+						line-height: 50px;
+						border: 3px solid white;
+						background: transparent;
+						text-align: center;
+						color: white;
+						text-transform: uppercase;
+						font-weight: 800;
+						&:hover {
+							background: white;
+							color: black;
+						}
+					}
+					.moreinfo {
+						position: absolute;
+						color: white;
+						text-align: center;
+						padding: 15px;
+						margin: 120px 50px;
+						width: ~"calc(100% - 130px)";
+						opacity: 0.6;
+						transition: opacity 200ms ease-in;
+						&:hover {
+							opacity: 0.9;
+						}
+					}
+					.attachment-shop_catalog {
+						width: 100%;
+						height: auto;
+					}
+				}
+				.title {
+					margin: 0;
+					font-weight: bolder;
+					letter-spacing: normal;
+					font-size: 1.8rem;
+				}
+				.price {
+					position: relative;
+					margin: 0;
+					padding-bottom: 20px;
+					text-align: right;
+					line-height: 0.9;
+					ins .amount,
+					> .amount {
+						font-size: 2.4rem;
+						font-weight: 700;
+						color: @button-color-primary;
+					}
+					del {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+@media only screen and (min-width: @query-mobile) {
+.flexboxer--archive__product {
+	.wrap {
+		&--masonry {
+			.item {
+				height: 416px;
+				flex: 0 1 300px;
+				.wrap--thumb {
+					height: 300px;
+				}
+				&:hover {
+					-webkit-box-shadow: 0 1px 30px rgba(0,0,0,.13);
+					box-shadow: 0 1px 30px rgba(0,0,0,.13);
+					.wrap--thumb {
+						height: 200px;
+						.overflow {
+							pointer-events: all !important;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
+
+@media only screen and (min-width: @query-tablet) {
+
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
+}
