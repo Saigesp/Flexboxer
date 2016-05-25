@@ -34,6 +34,7 @@
     		&.active {
     			padding: 10px;
     			margin-bottom: 5px;
+    			margin-top: 5px;
     			line-height: 1;
     			opacity: 1;
     			height: auto;
@@ -42,6 +43,32 @@
 			    font-size: 1.4rem;
 			    margin-bottom: 0;
     		}
+    		.newitem {
+    			background: transparent;
+    			margin: 0;
+    		}
+    	}
+    	.addbrother {
+			width: 100%;
+			height: 5px;
+			transition: height 200ms ease-out;
+			overflow: hidden;
+			&:hover {
+				background: rgba(0,0,0,0.1);
+				height: 40px;
+				span {
+					opacity: 1;
+				}
+			}
+			span {
+				opacity: 0;
+				text-align: center;
+				display: block;
+				line-height: 32px;
+				margin-top: 3px;
+				color: rgba(0,0,0,0.5);
+				cursor: pointer;
+			}
     	}
     }
 	.icon {
@@ -57,28 +84,34 @@
 		&:hover {
 			opacity: 0.9;
 		}
-	}
-	.icon--remove {
-		right: 0;
-	}
-	.icon--edit {
-		right: 42px;
-	}
-/*	.icon--dragdrop {
-		right: 84px;
-		cursor: all-scroll;
-	}
-	.icon--addmenu {
-	    position: static;
-	    top: initial;
-	    right: initial;
-	    vertical-align: top;
-	}*/
-	.icon--dragdrop {
-		display: none;
-	}
-	.icon--addmenu {
-	    right: 84px;
+		&--remove {
+			right: 0;
+		}
+		&--edit {
+			right: 42px;
+		}
+		&--dragdrop {
+			display: none;
+		}
+		&--addmenu {
+		    right: 84px;
+		}
+		&--star {
+		    position: relative;
+		    top: initial;
+		    right: initial;
+		    padding: 11px 3px;
+		    margin-right: 6px;
+		}
+		&--sheet {
+		    position: relative;
+		    top: initial;
+		    right: initial;
+		    cursor: default;
+		    &:hover {
+		    	opacity: 0.5;
+		    }
+		}
 	}
 }
 
