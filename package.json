@@ -1,6 +1,6 @@
 {
   "name": "flexboxer",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Ultra responsive CSS Framework based on flex display",
   "main": "index.js",
   "scripts": {
