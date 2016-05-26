@@ -106,13 +106,21 @@
 				position: relative;
 			}
 		}
-		li {
-			color: white;
-			a {
-				display: block;
-				padding: 15px;
-				color: inherit;
-				text-decoration: inherit;
+		ul.menu {
+			padding: 0 30px;
+			margin-top: 30px;
+			li {
+				color: white;
+				a {
+					display: block;
+					padding: 15px;
+					color: inherit;
+					text-decoration: inherit;
+					border-bottom: 1px solid rgba(255,255,255,0.6);
+					&:hover {
+						background: rgba(0,0,0,0.2);
+					}
+				}
 			}
 		}
 		.icon {
