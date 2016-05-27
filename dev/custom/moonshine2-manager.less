@@ -13,3 +13,28 @@ manager-app {
 	padding: 25px;
 	width: ~"calc(70% - 50px)";
 }
+
+menu-item-url,
+menu-item-pagina-contenido,
+menu-item-producto-catalogo,
+composition,
+composition-row {
+	width: 100%;
+}
+
+composition-row {
+	display: flex;
+	> div {
+		flex: 1 1 100%;
+		position: relative;
+		+ div {
+			.additem--left {
+				width: 60px !important;
+				left: -30px !important;
+			}
+			.addsheet--before {
+				display: none;
+			}
+		}
+	}
+}
