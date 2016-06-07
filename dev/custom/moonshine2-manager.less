@@ -12,6 +12,9 @@ manager-app {
 	position: fixed !important;
 	padding: 25px;
 	width: ~"calc(70% - 50px)";
+	.content h2:first-of-type {
+	    margin-top: 0;
+	}
 }
 
 menu-item-url,
@@ -22,6 +25,10 @@ composition-row {
 	width: 100%;
 }
 
+form-item + .wrap--frame {
+	margin-top: 10px;
+}
+
 composition-row {
 	display: flex;
 	> div {
@@ -29,12 +36,29 @@ composition-row {
 		position: relative;
 		+ div {
 			.additem--left {
-				width: 60px !important;
-				left: -30px !important;
+				width: 20px !important;
+				left: -10px !important;
 			}
 			.addsheet--before {
 				display: none;
 			}
 		}
 	}
+}
+
+.recentAction {
+  border-color: red !important;
+}
+
+menu-drag {
+  position: relative;
+  display: block;
+}
+
+drop-target.showMe > hr {
+	display: block !important;
+}
+
+.draggingMe drop-target > hr {
+  display: none !important;
 }

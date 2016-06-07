@@ -47,8 +47,8 @@ background-repeat: no-repeat;
 			}
 			+ .artwork {
 				.additem--left {
-					width: 60px;
-					left: -30px;
+					width: 20px;
+					left: -10px;
 				}
 				.icon--separe {
 					display: block;
@@ -64,7 +64,7 @@ background-repeat: no-repeat;
 		.additem {
 			.addmoonitems;
 			z-index: 2;
-			width: 45px;
+			width: 25px;
 			/*max-width: 17%;*/
 			height: 100%;
 			position: absolute;
@@ -91,10 +91,15 @@ background-repeat: no-repeat;
 	}
 	.addsheet {
 		.addmoonitems;
+		background-image: none;
 		height: 45px;
 		text-align: center;
 		&:hover {
 			opacity: 1;
+		}
+		span {
+			line-height: 45px;
+			opacity: 0.6;
 		}
 	}
 	.newsheet {
@@ -120,6 +125,16 @@ background-repeat: no-repeat;
 	.list--scroll input[type="checkbox"]:checked + label {
 		background-color: @button-hover-primary;
 		background-image: @icon-checkbox-white;
+	}
+	.sheetoptions {
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: all 200ms ease-in;
+		&.active {
+			max-height: 700px;
+			opacity: 1;
+		}
 	}
 }
 
