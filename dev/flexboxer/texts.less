@@ -4,10 +4,14 @@
  ***********************************/
 #basictitle() {
 	font-family: @title-font;
-	font-weight: 300;
+	font-weight: 100;
 	text-transform: uppercase;
-	letter-spacing: 5px;
+	letter-spacing: 0;
 	clear: both;
+}
+
+* {
+	font-weight: 100;
 }
 
 h1 {#basictitle; font-size: 26px; line-height: 1.3846153846;}
@@ -71,6 +75,11 @@ h6 {#basictitle; font-size: 16px; line-height: 1.5;}
 		}
     }
 }
+.text {
+	&--right { text-align: right; }
+	&--left { text-align: left; }
+	&--center { text-align: center; }
+}
 
 
 
@@ -82,9 +91,6 @@ h6 {#basictitle; font-size: 16px; line-height: 1.5;}
 	.sep {
 		margin-bottom: 5px;
 		margin-top: 45px;
-		&--notop {
-			margin-top: 0;
-		}
 	}
 }
 

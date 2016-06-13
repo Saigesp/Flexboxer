@@ -3,15 +3,25 @@
  ***********************************/
 .select2 {
 	&-container {
+		a {
+			border: 0;
+			border-radius: 0;
+		}
 		.select2-choice {
 			background: #DDD;
 			border: none;
 			border-radius: 0;
+			min-height: 45px;
+			line-height: 45px;
+			box-shadow: none;
 		}
 	}
-	&-drop-active {
-		background: #DDD;
-		border: 0;
+	&-drop {
+		border-top: 0 !important;
+		&-active {
+			background: #DDD;
+			border: 0;
+		}
 	}
 	&-search {
 		background: #DDD;
@@ -20,3 +30,4 @@
 		background: #DDD;
 	}
 }
+

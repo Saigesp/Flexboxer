@@ -13,10 +13,10 @@ html {
 }
 body {
 	position: relative;
-	height: 100%;
 	top: 0;
 	left: 0;
 	margin: 0;
+	min-height: 100vh;
 	background-color: @background-color;
 }
 
@@ -26,7 +26,8 @@ body {
 }
 
 #footer {
-	height: @footer-height;
+	min-height: @footer-height;
+	background-color: @footer-color;
 	position: relative;
     width: 100%;
 }
@@ -226,6 +227,16 @@ body {
 
 .wrap--flex + .wrap--flex {
 	margin-top: 10px;
+}
+
+
+.verflex {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	.verframe {
+		flex: 1;
+	}
 }
 
 
