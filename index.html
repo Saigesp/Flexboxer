@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Flexboxer by Saigesp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Flexboxer</h1>
+      <h2 class="project-tagline">LESS Framework based in display flex</h2>
+      <a href="https://github.com/Saigesp/Flexboxer" class="btn">View on GitHub</a>
+      <a href="https://github.com/Saigesp/Flexboxer/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Saigesp/Flexboxer/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="flexboxer" class="anchor" href="#flexboxer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Flexboxer</h1>
+
+<p>Small super-responsive CSS framework to structure simple web pages based on <strong>flexbox</strong>. Build with <strong>LESS</strong> and <strong>Gulp</strong>.</p>
+
+<p><a href="http://saigesp.es/demo/flexboxer/demo/demo1.html">Basic demo</a></p>
+
+<p><a href="http://saigesp.es/demo/flexboxer/demo/demo2.html">Dragabble list</a></p>
+
+<h3>
+<a id="install--use" class="anchor" href="#install--use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install &amp; use</h3>
+
+<p>To clone files to you local machine, run:</p>
+
+<pre><code>git clone https://github.com/Saigesp/Flexboxer.git
+</code></pre>
+
+<p>Now you can open any HTML demo file from <code>dist/demo</code></p>
+
+<h3>
+<a id="compile-files" class="anchor" href="#compile-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compile files</h3>
+
+<p>To <strong>compile</strong> LESS files, run:</p>
+
+<pre><code>gulp less
+</code></pre>
+
+<p>To <strong>watch</strong> LESS files and compilie it when they change, run:</p>
+
+<pre><code>gulp watch
+</code></pre>
+
+<p>To <strong>build</strong> a minified CSS file, run:</p>
+
+<pre><code>gulp build
+</code></pre>
+
+<hr>
+
+<h2>
+<a id="page-structure" class="anchor" href="#page-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Page structure</h2>
+
+<p>Flexboxer provides a simply page structure, divided in <strong>boxes</strong> and <strong>wrappers</strong>.</p>
+
+<p><strong>Boxes</strong> are the main section structure, and they split the content in rows.
+<strong>Wrappers</strong> are the subvidivers ob boxes, which works ina similar way to columns.</p>
+
+<h3>
+<a id="general-page-structure" class="anchor" href="#general-page-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General page structure</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">body</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>header<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>navleft<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>navright<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>footer<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;</pre></div>
+
+<h3>
+<a id="box-structure" class="anchor" href="#box-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Box structure</h3>
+
+<p>Inside <code>#main</code>, or directly in it, you can declare the box structure:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>flexboxer<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">section</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap wrap--content<span class="pl-pds">"</span></span>&gt;
+        // Inside box
+    &lt;/<span class="pl-ent">section</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>You can repeat it if you want:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>flexboxer<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">section</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap wrap--frame<span class="pl-pds">"</span></span>&gt;
+        // Box 1
+    &lt;/<span class="pl-ent">section</span>&gt;
+    &lt;<span class="pl-ent">section</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap wrap--content<span class="pl-pds">"</span></span>&gt;
+        // Box 2
+    &lt;/<span class="pl-ent">section</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p><code>wrap--frame</code> generates a box without padding, and <code>wrap--content</code> gives a simple padding to it's content.</p>
+
+<h3>
+<a id="wrappers-box-dividers" class="anchor" href="#wrappers-box-dividers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wrappers (Box dividers)</h3>
+
+<p>We need to compress boxs and restructure their content in a similar way to rows and columns, but with flexbox. The following example shows one box divided in two wraps with same width.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">section</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap wrap--content wrap--shadow<span class="pl-pds">"</span></span>&gt;                                       
+    &lt;<span class="pl-ent">h1</span>&gt;Crear nuevo usuario&lt;/<span class="pl-ent">h1</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap wrap--flex<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap wrap--frame wrap--frame__middle<span class="pl-pds">"</span></span>&gt;
+            // Content 50%
+        &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>wrap wrap--frame wrap--frame__middle<span class="pl-pds">"</span></span>&gt;
+            // Content 50%
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">section</span>&gt;</pre></div>
+
+<h4>
+<a id="list-of-dividers" class="anchor" href="#list-of-dividers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of Dividers</h4>
+
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Wrap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wrap--content__middle</td>
+<td>50% of space, with padding</td>
+</tr>
+<tr>
+<td>wrap--content__full</td>
+<td>100% of space, with padding</td>
+</tr>
+<tr>
+<td>wrap--content__toframe</td>
+<td>100% of space, padding only in small sizes</td>
+</tr>
+<tr>
+<td>wrap--frame__middle</td>
+<td>50% of space, no padding</td>
+</tr>
+<tr>
+<td>wrap--frame__decim</td>
+<td>10% of space, no padding</td>
+</tr>
+</tbody>
+</table>
+
+<p>//TODO: Extend dividers</p>
+
+<hr>
+
+<h2>
+<a id="altres" class="anchor" href="#altres" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Altres</h2>
+
+<h4>
+<a id="draggable-list" class="anchor" href="#draggable-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Draggable list</h4>
+
+<p>//TODO: Extend structure &amp; implemennt basic drag&amp;drop pluggin to test</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>list list--editmenu<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">li</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>item item--editmenu<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>childitem<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">span</span>&gt; [ texto 1 ] &lt;/<span class="pl-ent">span</span>&gt;
+                [ iconos ]
+            &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">li</span>&gt;
+    &lt;<span class="pl-ent">li</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>item item--editmenu<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>childitem<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">span</span>&gt; [ texto 2 ] &lt;/<span class="pl-ent">span</span>&gt;
+                [ iconos ]
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">ul</span>&gt;
+                &lt;<span class="pl-ent">li</span>&gt;
+                    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>item item--editmenu<span class="pl-pds">"</span></span>&gt;
+                        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>childitem<span class="pl-pds">"</span></span>&gt;
+                            &lt;<span class="pl-ent">span</span>&gt; [ texto 2.1 ]&lt;/<span class="pl-ent">span</span>&gt;
+                            [ iconos ]
+                        &lt;/<span class="pl-ent">div</span>&gt;
+                    &lt;/<span class="pl-ent">div</span>&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+                &lt;<span class="pl-ent">li</span>&gt;
+                    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>item item--editmenu<span class="pl-pds">"</span></span>&gt;
+                        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>childitem<span class="pl-pds">"</span></span>&gt;
+                            &lt;<span class="pl-ent">span</span>&gt; [ texto 2.2 ] &lt;/<span class="pl-ent">span</span>&gt;
+                            [ iconos ]
+                        &lt;/<span class="pl-ent">div</span>&gt;
+                    &lt;/<span class="pl-ent">div</span>&gt;
+                &lt;/<span class="pl-ent">li</span>&gt;
+            &lt;/<span class="pl-ent">ul</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ul</span>&gt;</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Saigesp/Flexboxer">Flexboxer</a> is maintained by <a href="https://github.com/Saigesp">Saigesp</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
