@@ -266,7 +266,7 @@
 
         <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
           <h1>Masonry (Gallery)</h1>
-          <p>Yep, there're also a gallery layout fyi.</p>
+          <p>Yep, there're also a gallery layout FYI.</p>
           <pre><code>
     &lt;section class="wrap wrap--frame wrap--masonry"&gt;
         &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
@@ -281,26 +281,165 @@
         </section>
 
         <section class="wrap wrap--frame wrap--masonry">
-          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content" style="background-color: #A3DB42; color: white;">
             item 1
           </div>
-          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content" style="background-color: #A3DB42; color: white;">
             item 2
           </div>
-          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content" style="background-color: #A3DB42; color: white;">
             item 3
           </div>
-          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content" style="background-color: #A3DB42; color: white;">
             item 4
           </div>
-          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content" style="background-color: #A3DB42; color: white;">
             item 5
           </div>
-          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content" style="background-color: #A3DB42; color: white;">
             item 6
           </div>
         </section>
 
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Forms</h1>
+          <h3 class="sep">Form structure</h3>
+          <p>This framework works specially well with forms (That's the actually reason for build it)</p>
+          <p>To stylize a form, yo only need one class, <code>wrap--form</code>:</p>
+          <pre><code>
+    &lt;section class="wrap wrap--content wrap--form"&gt;
+        &lt;label for="text1"&gt;Text label&lt;/label&gt;
+        &lt;input id="text1" type="text" placeholder="Text field"&gt;
+    &lt;/section&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--form">
+          <label for="text1">Text label</label>
+          <input id="text1" type="text" placeholder="Text field">
+          <button type="submit" value="">Submit</button>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>And if we combine these styles with the box structure, we have:</p>
+          <pre><code>
+    &lt;section class="wrap wrap--content wrap--form"&gt;
+        &lt;div class="wrap wrap--flex"&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;
+                &lt;label for="text2"&gt;Text label 1&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;
+                &lt;input id="text2" type="text" placeholder="Text field 1"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="wrap wrap--flex"&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;
+                &lt;label for="text3"&gt;Text label 2&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;
+                &lt;input id="text3" type="text" placeholder="Text field 2"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="wrap wrap--frame wrap--submit"&gt;
+            &lt;button type="submit" value=""&gt;Submit&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--form">
+          <div class="wrap wrap--flex">
+            <div class="wrap wrap--frame wrap--frame__middle">
+              <label for="text2">Text label 1</label>
+            </div>
+            <div class="wrap wrap--frame wrap--frame__middle">
+              <input id="text2" type="text" placeholder="Text field 1">
+            </div>
+          </div>
+          <div class="wrap wrap--flex">
+            <div class="wrap wrap--frame wrap--frame__middle">
+              <label for="text3">Text label 2</label>
+            </div>
+            <div class="wrap wrap--frame wrap--frame__middle">
+              <input id="text3" type="text" placeholder="Text field 2">
+            </div>
+          </div>
+          <div class="wrap wrap--frame wrap--submit">
+            <button type="submit" value="">Submit</button>
+          </div>
+        </section>
+
+        <section class="wrap wrap--content">
+          <h3 class="sep">Checkboxes & labels</h3>
+          <p>Checkboxes and labels have a particular structure:</p>
+          <pre><code>
+    &lt;section class="wrap wrap--content wrap--form"&gt;
+        &lt;div class="wrap wrap--flex"&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;
+                 &lt;label for="check1"&gt;Checkbox without text&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle wrap--checkbox"&gt;
+                &lt;input type="checkbox" id="check1"&gt;
+                &lt;label for="check1"&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="wrap wrap--flex"&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;
+                &lt;span&gt;Checkbox with text&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle wrap--checkbox"&gt;
+                &lt;input type="checkbox" id="check2"&gt;
+                &lt;label for="check2"&gt;&lt;span&gt;Text 1&lt;/span&gt;&lt;/label&gt;
+                &lt;input type="checkbox" id="check3"&gt;
+                &lt;label for="check3"&gt;&lt;span&gt;Text 2&lt;/span&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="wrap wrap--flex"&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle wrap--checkbox"&gt;
+                &lt;span&gt;Radio buttons&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle wrap--checkbox"&gt;
+                &lt;input type="radio" name="radios" id="radio1"&gt;
+                &lt;label for="radio1"&gt;&lt;span&gt;Radio 1&lt;/span&gt;&lt;/label&gt;
+                &lt;input type="radio" name="radios" id="radio2"&gt;
+                &lt;label for="radio2"&gt;&lt;span&gt;Radio 2&lt;/span&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--form">
+          <div class="wrap wrap--flex">
+            <div class="wrap wrap--frame wrap--frame__middle">
+              <label for="check1">Label out of the checkbox</label>
+            </div>
+            <div class="wrap wrap--frame wrap--frame__middle wrap--checkbox">
+              <input type="checkbox" id="check1"><label for="check1"></label>
+            </div>
+          </div>
+          <div class="wrap wrap--flex">
+            <div class="wrap wrap--frame wrap--frame__middle">
+              <span>Checkbox with text</span>
+            </div>
+            <div class="wrap wrap--frame wrap--frame__middle wrap--checkbox">
+              <input type="checkbox" id="check2"><label for="check2"><span>Text 1</span></label>
+              <input type="checkbox" id="check3"><label for="check3"><span>Text 2</span></label>
+            </div>
+          </div>
+          <div class="wrap wrap--flex">
+            <div class="wrap wrap--frame wrap--frame__middle wrap--checkbox">
+              <span>Radio buttons</span>
+            </div>
+            <div class="wrap wrap--frame wrap--frame__middle wrap--checkbox">
+              <input type="radio" name="radios" id="radio1"><label for="radio1"><span>Radio 1</span></label>
+              <input type="radio" name="radios" id="radio2"><label for="radio2"><span>Radio 2</span></label>
+            </div>
+          </div>
+        </section>
 
       </div>
 
