@@ -20,8 +20,6 @@ background-repeat: no-repeat;
 
 .wrap--moonraker {
 	.sheet {
-		display: flex;
-		flex-wrap: nowrap;
 		width: 100%;
 		.artwork {
 			flex: 1 1 100%;
@@ -47,36 +45,10 @@ background-repeat: no-repeat;
 					color: #666;
 				}
 			}
-			.additem {
-				width: 45px;
-				/*max-width: 17%;*/
-				height: 100%;
-				position: absolute;
-				top: 0;
-				.addmoonitems;
-				&:hover {
-					opacity: 1;
-					.icon--separe:hover {
-						opacity: 0.9;
-					}
-				}
-				&--left {
-					left: 0;
-				}
-				&--right {
-					right: 0;
-				}
-				.icon--separe {
-					display: none;
-					opacity: 0.3;
-					margin: 0 auto;
-					transition: opacity 200ms ease-in;
-				}
-			}
 			+ .artwork {
 				.additem--left {
-					width: 60px;
-					left: -30px;
+					width: 20px;
+					left: -10px;
 				}
 				.icon--separe {
 					display: block;
@@ -89,13 +61,45 @@ background-repeat: no-repeat;
 				}
 			}
 		}
+		.additem {
+			.addmoonitems;
+			z-index: 2;
+			width: 25px;
+			/*max-width: 17%;*/
+			height: 100%;
+			position: absolute;
+			top: 0;
+			&:hover {
+				opacity: 1;
+				.icon--separe:hover {
+					opacity: 0.9;
+				}
+			}
+			&--left {
+				left: 0;
+			}
+			&--right {
+				right: 0;
+			}
+			.icon--separe {
+				display: none;
+				opacity: 0.3;
+				margin: 0 auto;
+				transition: opacity 200ms ease-in;
+			}
+		}
 	}
 	.addsheet {
+		.addmoonitems;
+		background-image: none;
 		height: 45px;
 		text-align: center;
-		.addmoonitems;
 		&:hover {
 			opacity: 1;
+		}
+		span {
+			line-height: 45px;
+			opacity: 0.6;
 		}
 	}
 	.newsheet {
@@ -121,6 +125,16 @@ background-repeat: no-repeat;
 	.list--scroll input[type="checkbox"]:checked + label {
 		background-color: @button-hover-primary;
 		background-image: @icon-checkbox-white;
+	}
+	.sheetoptions {
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: all 200ms ease-in;
+		&.active {
+			max-height: 700px;
+			opacity: 1;
+		}
 	}
 }
 

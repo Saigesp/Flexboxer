@@ -91,7 +91,7 @@
 			right: 42px;
 		}
 		&--dragdrop {
-			display: none;
+			right: 126px;
 		}
 		&--addmenu {
 		    right: 84px;
@@ -102,6 +102,9 @@
 		    right: initial;
 		    padding: 11px 3px;
 		    margin-right: 6px;
+		    &__full {
+		    	opacity: 0.9;
+		    }
 		}
 		&--sheet {
 		    position: relative;
@@ -111,6 +114,39 @@
 		    &:hover {
 		    	opacity: 0.5;
 		    }
+		}
+	}
+	&__simple {
+		margin-left: 0;
+		li {
+			margin: 0;
+			background: transparent;
+			&:nth-child(odd) {
+				background: rgba(0,0,0,0.1);
+			}
+		}
+		.item {
+			margin-left: 0;
+			&:hover {
+				background: transparent;
+			}
+			.childitem {
+				box-shadow: none;
+				background-color: transparent;
+				&:hover {
+					background: transparent;
+				}
+			}
+		}
+	}
+	&__folder {
+		li {
+			background: transparent;
+			.item {
+				.childitem {
+	
+				}
+			}
 		}
 	}
 }
