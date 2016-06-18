@@ -41,6 +41,14 @@
 	pointer-events: none;
 }
 
+#basictextarea() {
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	background: rgba(0,0,0,0.1);
+	line-height: 2;
+}
+
 .wrap{
 	&--form,
 	.woocommerce-checkout {
@@ -120,11 +128,7 @@
 			}
 		}
 		textarea {
-			width: 100%;
-			border: 0;
-			padding: 15px;
-			background: rgba(0,0,0,0.1);
-			line-height: 2;
+			#basictextarea
 		}
 		label,
 		span {

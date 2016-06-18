@@ -1,4 +1,12 @@
-
+/**
+ * Project: flexboxer 
+ * Version: v0.1.10.2
+ * Description: Ultra responsive CSS Framework based on flex display
+ * Author: Saigesp
+ * Author email: saigesp@saigesp.es
+ * Licence: MIT
+ * Web: https://github.com/Saigesp/Flexboxer#readme
+ */
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300);
 /**
  * RESET
@@ -470,6 +478,18 @@ body {
   max-width: none;
   width: 100%;
 }
+.flexboxer > .title {
+  flex: 1 1 100%;
+  padding: 15px 0 0;
+  margin: 30px 15px 15px;
+  line-height: 1.3;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+.flexboxer .wrap > h1:first-of-type,
+.flexboxer .wrap > h2:first-of-type {
+  margin-top: 0;
+}
 .flexboxer .wrap--flex {
   display: flex;
   flex-wrap: wrap;
@@ -478,10 +498,6 @@ body {
 .flexboxer .wrap--content {
   padding: 20px;
   flex: 1 0 calc(100% - 20px*2);
-}
-.flexboxer .wrap--content > h1:first-of-type,
-.flexboxer .wrap--content > h2:first-of-type {
-  margin-top: 0;
 }
 .flexboxer .wrap--frame {
   padding: 0;
@@ -511,6 +527,12 @@ body {
 }
 .flexboxer .wrap--spaced {
   margin: 100px auto !important;
+}
+.flexboxer .wrap--spaced__top {
+  margin-bottom: 0 !important;
+}
+.flexboxer .wrap--spaced__bottom {
+  margin-top: 0 !important;
 }
 .flexboxer .wrap--controls {
   line-height: 1;
@@ -556,14 +578,9 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
 }
-.flexboxer .wrap--masonry .mason {
+.flexboxer .wrap--masonry > .wrap {
   flex: 1 1 300px;
   margin: 5px;
-}
-.flexboxer .wrap--masonry .mason--cover {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 .flexboxer > .wrap {
   margin-top: 10px;
@@ -720,6 +737,10 @@ body {
   .flexboxer .list .wrap {
     margin: 0;
   }
+  .flexboxer > .title {
+    max-width: 900px;
+    margin: 30px auto 15px;
+  }
 }
 @media only screen and (min-width: 1120px) {
   body {
@@ -769,6 +790,9 @@ body {
   }
   .flexboxer > .wrap--frame,
   .flexboxer > .wrap--content__toframe {
+    max-width: 1100px;
+  }
+  .flexboxer > .title {
     max-width: 1100px;
   }
 }
@@ -2477,56 +2501,37 @@ button.secondary:focus {
     display: block;
   }
 }
-.cdp-cookies-alerta {
-  top: initial !important;
-  bottom: 0;
-  border-top: 1px solid #FFF !important;
-  border-bottom: 0 !important;
-  background-color: #000 !important;
+code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 6px;
+  border-radius: 4px;
+  word-break: break-word;
 }
-.cdp-cookies-alerta h4,
-.cdp-cookies-alerta .cdp-cookies-boton-creditos {
-  display: none;
+pre {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 0;
 }
-.cdp-cookies-alerta .cdp-cookies-texto {
-  padding: 0 10px;
-  max-width: 1160px;
-}
-.cdp-cookies-alerta.cdp-cookies-tema-gris .cdp-cookies-texto a {
-  color: #CCC !important;
-}
-.cdp-cookies-alerta.cdp-cookies-tema-gris .cdp-cookies-texto a:hover {
-  color: white !important;
+pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 mark,
 ins {
   background: transparent;
   text-decoration: none;
 }
-#bitnami-banner {
-  display: none;
+a {
+  color: #FE6FCA;
 }
 a:active,
 a:hover {
-  color: #000;
+  color: #FE6FCA;
 }
 body {
   background: white !important;
-}
-.payment_method_paypal label img,
-.payment_method_paypal label a {
-  display: none;
-}
-#ship-to-different-address label {
-  letter-spacing: initial;
-  text-transform: none;
-  font-family: 'Nunito', sans-serif;
-}
-#ship-to-different-address label.checked {
-  background-color: #BBB !important;
-  background-image: url('img/svg/radio.svg') !important;
-  border-bottom-width: 1px !important;
-  margin-top: 4px !important;
 }
 .cta {
   display: block;
@@ -2548,41 +2553,7 @@ body {
   color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.6) inset;
 }
-#order_review_heading {
-  margin-top: 200px;
-}
-.woocommerce form input[type="text"],
-.woocommerce form input[type="password"],
-.woocommerce form input[type="email"],
-.woocommerce form input[type="tel"] {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  border: 0;
-  transition: all 200ms ease;
-  min-height: 45px;
-  min-width: 45px;
-  width: 100%;
-  font-size: inherit;
-  box-sizing: border-box;
-}
-.woocommerce form.login {
-  max-width: 280px;
-  margin: 0 auto;
-  background: white;
-  border: 0;
-  border-radius: 0;
-  -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.13);
-  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.13);
-}
-.woocommerce form.login .lost_password {
-  margin-bottom: 0;
-}
 .footer {
   color: white;
   font-size: 1.3rem;
-}
-@media only screen and (min-width: 780px) {
-  .flexboxer--presentation {
-    padding-top: 0;
-  }
 }

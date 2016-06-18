@@ -24,7 +24,7 @@ gulp.task('less', function() {
   gulp.src('./dev/style.less')
     .pipe(less())
     .pipe(header(banner, {pkg: pkg}))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./assets/styles/'));
 });
 
 /* Task to watch less changes */
@@ -33,15 +33,15 @@ gulp.task('watch-less', ['less'], function() {
 });
 
 /* Task to minify css */
-gulp.task('minify-css', ['less'], function() {  
-  gulp.src('./dist/*.css')
+gulp.task('min', ['less'], function() {  
+  gulp.src('./assets/styles/*.css')
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest( './dist/min/' ));
+    .pipe(gulp.dest( './assets/styles/min/' ));
 });
 
 /* Task when running `gulp` from terminal */
 gulp.task('serve', ['watch-less']);
 
 /* Task when running `gulp build` from terminal */
-gulp.task('build', ['minify-css']);  
+gulp.task('build', ['min']);  
