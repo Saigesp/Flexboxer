@@ -341,6 +341,7 @@
         &lt;/div&gt;
     &lt;/section&gt;
           </code></pre>
+          <p><strong>Note</strong> the <code>wrap--submit</code> class in the last row.</p>
           <p>This will looks like:</p>
         </section>
 
@@ -366,11 +367,12 @@
           </div>
         </section>
 
-        <section class="wrap wrap--content">
-          <h1>Checkboxes & labels</h1>
-          <p>Checkboxes and labels have a particular structure:</p>
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Checkboxes & radio buttons</h1>
+          <p>Checkboxes and radios have a particular structure: <code>&lt;input&gt;</code> + <code>&lt;label&gt; &lt;span&gt;Text&lt;/span&gt; &lt;/label&gt;</code> </p>
           <pre><code>
     &lt;section class="wrap wrap--content wrap--form"&gt;
+        &lt;h3 class="sep"&gt;Checkboxes&lt;/h3&gt;
         &lt;div class="wrap wrap--flex"&gt;
             &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;
                  &lt;label for="check1"&gt;Checkbox without text&lt;/label&gt;
@@ -391,6 +393,7 @@
                 &lt;label for="check3"&gt;&lt;span&gt;Text 2&lt;/span&gt;&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+        &lt;h3 class="sep"&gt;Radio buttons&lt;/h3&gt;
         &lt;div class="wrap wrap--flex"&gt;
             &lt;div class="wrap wrap--frame wrap--frame__middle wrap--checkbox"&gt;
                 &lt;span&gt;Radio buttons&lt;/span&gt;
@@ -404,13 +407,15 @@
         &lt;/div&gt;
     &lt;/section&gt;
           </code></pre>
+          <p><strong>Note</strong> the <code>&lt;h3 class="sep"&gt;</code> element as divisor.</p>
           <p>This will looks like:</p>
         </section>
 
         <section class="wrap wrap--content wrap--form">
+          <h3 class="sep">Checkboxes</h3>
           <div class="wrap wrap--flex">
             <div class="wrap wrap--frame wrap--frame__middle">
-              <label for="check1">Label out of the checkbox</label>
+              <label for="check1">Checkbox without text</label>
             </div>
             <div class="wrap wrap--frame wrap--frame__middle wrap--checkbox">
               <input type="checkbox" id="check1"><label for="check1"></label>
@@ -425,6 +430,7 @@
               <input type="checkbox" id="check3"><label for="check3"><span>Text 2</span></label>
             </div>
           </div>
+          <h3 class="sep">Radio buttons</h3>
           <div class="wrap wrap--flex">
             <div class="wrap wrap--frame wrap--frame__middle wrap--checkbox">
               <span>Radio buttons</span>
@@ -434,6 +440,157 @@
               <input type="radio" name="radios" id="radio2"><label for="radio2"><span>Radio 2</span></label>
             </div>
           </div>
+        </section>
+
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Elements List</h1>
+          <p>So you want a fucking <strong>simple list</strong>, right? Here you have:</p>
+          <pre><code>
+    &lt;ul class="list"&gt;
+        &lt;li class="item"&gt;Item 1&lt;/li&gt;
+        &lt;li class="item"&gt;Item 2&lt;/li&gt;
+        &lt;li class="item"&gt;Item 3&lt;/li&gt;
+        &lt;li class="item"&gt;Item 4&lt;/li&gt;
+    &lt;/ul&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content">
+          <ul class="list">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+            <li class="item">Item 4</li>
+          </ul>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>Beautiful and useless, so lets add our <strong>flex structure</strong> and some <strong>buttons</strong>:</p>
+          <pre><code>
+    &lt;ul class="list"&gt;
+        &lt;li class="item wrap wrap--flex"&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;Item&lt;/div&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle wrap--buttons"&gt;
+                &lt;img src="./assets/img/icons/hamburguer.svg" alt="" class="icon"&gt;
+                &lt;img src="./assets/img/icons/close.svg" alt="" class="icon"&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+          </code></pre>
+          <p><strong>Note</strong> the <code>icon</code> class in the images and the <code>wrap--buttons</code> class in their container.</p>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content">
+          <ul class="list">
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>Maybe your list is huge and you want to <strong>make it scrollable</strong>:</p>
+          <pre><code>
+    &lt;ul class="list list--scroll list--scroll__y"&gt;
+        &lt;li class="item wrap wrap--flex"&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle"&gt;Item&lt;/div&gt;
+            &lt;div class="wrap wrap--frame wrap--frame__middle wrap--buttons"&gt;
+                &lt;img src="./assets/img/icons/hamburguer.svg" alt="" class="icon"&gt;
+                &lt;img src="./assets/img/icons/close.svg" alt="" class="icon"&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+          </code></pre>
+          <p>Yep, there're also <code>list--scroll__x</code>.</p>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content">
+          <ul class="list list--scroll list--scroll__y">
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+            <li class="item wrap wrap--flex">
+              <div class="wrap wrap--frame wrap--frame__middle">Item</div>
+              <div class="wrap wrap--frame wrap--frame__middle wrap--buttons">
+                <img src="./assets/img/icons/hamburguer.svg" alt="" class="icon">
+                <img src="./assets/img/icons/close.svg" alt="" class="icon">
+              </div>
+            </li>
+          </ul>
         </section>
 
       </div>

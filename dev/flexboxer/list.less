@@ -38,7 +38,7 @@
 			}
 		}
 	}
-	> .wrap--flex { /* Cambiar por itemlist */
+	> .item {
 		margin: 0 !important;
 		padding: 5px 10px;
 		.wrap {
@@ -51,7 +51,7 @@
 		&:nth-child(odd) {
 			background: rgba(0,0,0,0.1);
 		}
-		+ .wrap--flex {
+		+ .item {
 			margin: 0;
 		}
 	}
@@ -78,3 +78,26 @@
 		background-color: white;
 	}
 }
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+@media only screen and (min-width: @query-mobile) {
+	.list {
+		.wrap--flex {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+@media only screen and (min-width: @query-tablet) {
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
+}
+
