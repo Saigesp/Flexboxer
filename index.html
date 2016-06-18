@@ -16,7 +16,7 @@
     <meta name="google-site-verification" content="">
     <meta name="twitter:title" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" type="text/css" href="http://40.69.91.105/wp-content/themes/SanderBlockeCommerce/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
   </head>
   <body class="verflex">
     <div id="menutop" class="menu menu--top js-menu animecubic550">
@@ -70,7 +70,6 @@
       </div><!-- end of image cover -->
       
       <div class="flexboxer">
-      
         <!-- introduction -->
         <section class="wrap wrap--content wrap--spaced text--center">
           <h1>What is this?</h1>
@@ -82,20 +81,182 @@
         </section><!-- end of introduction -->
 
         <section class="wrap wrap--content">
-          <h1>Install & use</h1>
-          <p>To clone files to you local machine, run:</p>
-          <code>git clone https://github.com/Saigesp/Flexboxer.git</code>
+          <h1>Install</h1>
+          <p>To <strong>clone</strong> files to you local machine, run: <code>git clone https://github.com/Saigesp/Flexboxer.git</code></p>
+          <p>To <strong>install</strong> files from npm, run: <code>npm install flexboxer</code></p>
+          <p>Or simply <strong>download</strong> the last <a href="https://raw.githubusercontent.com/Saigesp/Flexboxer/master/dist/style.css">CSS file</a></p>
         </section>
 
         <section class="wrap wrap--content">
-          <h1>Compile files</h1>
-          <p>To compile LESS files, run:</p>
-          <code>gulp less</code>
-          <p>To watch LESS files and compilie it when they change, run:</p>
-          <code>gulp watch</code>
-          <p>To build a minified CSS file, run:</p>
-          <code>gulp build</code>
+          <h1>Development</h1>
+          <p>To <strong>compile</strong> LESS files, run: <code>gulp less</code></p>
+          <p>To <strong>watch</strong> LESS files and compilie it when they change, run: <code>gulp watch</code></p>
+          <p>To <strong>build</strong> a minified CSS file, run: <code>gulp build</code></p>
+          <p><strong>Pull request are welcome</strong></p>
         </section>
+      </div>
+
+      <div class="flexboxer">
+        <h1 class="title">Use</h1>
+
+        <section class="wrap wrap--content">
+          <h1>Page structure</h1>
+          <p>Flexboxer provides a simply page structure, divided in <strong>boxes</strong> and <strong>wrappers</strong>. <strong>Boxes</strong> are the main section structure, and they split the content in rows. <strong>Wrappers</strong> are the subvidivers ob boxes, which works ina similar way to columns.</p>
+          <p>The gereal page layout looks like:</p>
+          <pre><code>
+    &lt;body&gt;
+        &lt;div id="header"&gt;&lt;/div&gt;
+        &lt;div id="wrapper"&gt;&lt;/div&gt;
+        &lt;div id="footer"&gt;&lt;/div&gt;
+    &lt;/body&gt;
+          </code></pre>
+          <p>Inside <code>#wrapper</code> you can declare the box structure.</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Box structure</h1>
+          <pre><code>
+    &lt;div class="flexboxer"&gt;
+        &lt;section class="wrap wrap--content"&gt;
+            // Inside box
+        &lt;/section&gt;
+    &lt;/div&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          // Inside box
+        </section>
+
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Box types</h1>
+          <p>There are 2 big types of boxes: <strong>frame</strong> and <strong>content</strong></p>
+          <p><strong>wrap--frame</strong> is preferred for images, forms, videos, iframes, etc.</p>
+          <p><strong>wrap--content</strong> is preferred for texts.</p>
+          <pre><code>
+    &lt;div class="flexboxer"&gt;
+        &lt;section class="wrap wrap--content"&gt;
+            // Content box
+        &lt;/section&gt;
+        &lt;section class="wrap wrap--frame"&gt;
+            // Frame box
+        &lt;/section&gt;
+    &lt;/div&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          // Content box
+        </section>
+
+        <section class="wrap wrap--frame wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          // Frame box
+        </section>
+
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Box dividers</h1>
+          <p>We need to compress boxs and restructure their content in a similar way to <strong>rows and columns</strong>, but with flexbox. The following example shows one box divided in two wraps with same width.</p>
+          <pre><code>
+    &lt;section class="wrap wrap--content wrap--flex"&gt;                                       
+        &lt;div class="wrap wrap--content wrap--content__middle"&gt;
+            // Content 50%
+        &lt;/div&gt;
+        &lt;div class="wrap wrap--content wrap--content__middle"&gt;
+            // Content 50%
+        &lt;/div&gt;
+    &lt;/section&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--flex wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #B66FFE;">
+            // Content inside content
+          </div>
+          <div class="wrap wrap--content wrap--content__middle"style="background-color: #B66FFE;">
+            // Content inside content
+          </div>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p style="margin-bottom: 0;">You can combine <strong>frames</strong> and <strong>content</strong> also:</p>
+        </section>
+
+        <section class="wrap wrap--content wrap--flex wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--frame wrap--frame__middle" style="background-color: #43C6ED">
+            // Frame inside content
+          </div>
+          <div class="wrap wrap--frame wrap--frame__middle" style="background-color: #43C6ED">
+            // Frame inside content
+          </div>
+        </section>
+
+        <section class="wrap wrap--frame wrap--flex wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--frame wrap--frame__middle" style="background-color: #43C6ED">
+            // Frame inside frame
+          </div>
+          <div class="wrap wrap--frame wrap--frame__middle" style="background-color: #43C6ED">
+            // Frame inside frame
+          </div>
+        </section>
+
+        <section class="wrap wrap--frame wrap--flex wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #B66FFE;">
+            // Content inside frame
+          </div>
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #B66FFE;">
+            // Content inside frame
+          </div>
+        </section>
+
+        <section class="wrap wrap--content wrap--flex wrap--shadow" style="background-color: #FE6FCA; color: white;">
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #B66FFE;">
+            // Content inside content
+          </div>
+          <div class="wrap wrap--frame wrap--frame__middle" style="background-color: #43C6ED">
+            // Frame inside content
+          </div>
+        </section>
+
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Masonry (Gallery)</h1>
+          <p>Yep, there're also a gallery layout fyi.</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry"&gt;
+        &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
+        &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
+        &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
+        &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
+        &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
+        &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
+    &lt;/section&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry">
+          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+            item
+          </div>
+          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+            item
+          </div>
+          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+            item
+          </div>
+          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+            item
+          </div>
+          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+            item
+          </div>
+          <div class="wrap wrap--content" style="background-color: #FE6FCA; color: white;">
+            item
+          </div>
+        </section>
+
 
       </div>
 
@@ -120,7 +281,7 @@
         </div>
       </div>
     </footer> <!-- end footer -->
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script type="text/javascript" src="./assets/js/app.js"></script>
   </body>
 </html>
