@@ -1295,6 +1295,7 @@ button {
   border-bottom: 5px solid #46A26F;
   text-decoration: none;
   transition: all 200ms ease;
+  backface-visibility: hidden;
 }
 input[type="submit"]:hover,
 button:hover {
@@ -1353,6 +1354,7 @@ button.secondary:focus {
   background: #5FD694;
   border-bottom: 5px solid #46A26F;
   text-decoration: none;
+  backface-visibility: hidden;
   padding: 5px 12px;
   transition: all 200ms ease;
 }
@@ -1392,6 +1394,7 @@ button.secondary:focus {
   background: #5FD694;
   border-bottom: 5px solid #46A26F;
   transition: all 200ms ease;
+  backface-visibility: hidden;
   background: #63C8FF;
   border-color: #3D91D2;
   color: #3179B0;
@@ -2031,6 +2034,7 @@ button.secondary:focus {
   border-bottom: 5px solid #46A26F;
   text-decoration: none;
   transition: all 200ms ease;
+  backface-visibility: hidden;
   min-width: initial;
 }
 .flexboxer .woocommerce .button:hover,
