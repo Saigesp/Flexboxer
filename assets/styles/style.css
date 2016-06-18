@@ -494,14 +494,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
 }
 .flexboxer .wrap--content {
   padding: 20px;
   flex: 1 0 calc(100% - 20px*2);
+  margin: 10px auto;
 }
 .flexboxer .wrap--frame {
   padding: 0;
   flex: 1 1 100%;
+  margin: 10px auto;
 }
 .flexboxer .wrap--frame__decim {
   flex: 1 1 10%;
@@ -676,28 +679,24 @@ body {
   }
   .flexboxer .wrap--frame__middle + .wrap--frame__middle {
     flex: 1 1 calc(50% - 20px/2);
-    margin-left: 10px;
   }
   .flexboxer .wrap--content__middle {
     flex: 1 1 calc(50% - 20px*2);
   }
   .flexboxer .wrap--content__middle + .wrap--content__middle {
     flex: 1 1 calc(50% - 20px*5/2);
-    margin-left: 10px;
   }
   .flexboxer .wrap--frame__third {
     flex: 1 1 33%;
   }
-  .flexboxer .wrap--frame__third + .wrap--frame__middle {
+  .flexboxer .wrap--frame__third + .wrap--frame__third {
     flex: 1 1 calc(33% - 20px/2);
-    margin-left: 10px;
   }
   .flexboxer .wrap--content__third {
     flex: 1 1 calc(33% - 20px*2);
   }
-  .flexboxer .wrap--content__third + .wrap--frame__middle {
+  .flexboxer .wrap--content__third + .wrap--content__third {
     flex: 1 1 calc(33% - 20px/2);
-    margin-left: 10px;
   }
 }
 @media only screen and (min-width: 780px) {
@@ -710,9 +709,6 @@ body {
   }
   .flexboxer .wrap--flex {
     flex-wrap: nowrap;
-  }
-  .flexboxer .wrap--content {
-    margin: 10px auto;
   }
   .flexboxer .wrap--content__toframe {
     padding: 0;

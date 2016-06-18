@@ -75,14 +75,17 @@ body {
 		    display: flex;
 		    flex-wrap: wrap;
 		    flex-direction: row;
+		    justify-content: space-between;
 		}
 		&--content {
 			padding: @wrap-content-padding;
 			flex: 1 0 ~"calc(100% - @{wrap-content-padding}*2)";
+			margin: 10px auto;
 		}
 		&--frame  {
 			padding: 0;
 		    flex: 1 1 100%;
+		    margin: 10px auto;
 			&__decim { flex: 1 1 10%; }
 			&__85    { flex: 0 1 100px; }
 			&__100   { flex: 0 1 100px; }
@@ -260,28 +263,24 @@ body {
 	    	flex: 1 1 50%;
 	    	+ .wrap--frame__middle {
 			    flex: 1 1  ~"calc(50% - @{wrap-content-padding}/2)";
-			    margin-left: @wrap-content-padding/2;
 	    	}
 	    }
 		.wrap--content__middle {
 		    flex: 1 1 ~"calc(50% - @{wrap-content-padding}*2)";
 		    + .wrap--content__middle{
 			    flex: 1 1 ~"calc(50% - @{wrap-content-padding}*5/2)";
-			    margin-left: @wrap-content-padding/2;
 			}
 		}
 		.wrap--frame__third {
 	    	flex: 1 1 33%;
-	    	+ .wrap--frame__middle {
+	    	+ .wrap--frame__third {
 			    flex: 1 1  ~"calc(33% - @{wrap-content-padding}/2)";
-			    margin-left: @wrap-content-padding/2;
 	    	}
 		}
 		.wrap--content__third {
 	    	flex: 1 1 ~"calc(33% - @{wrap-content-padding}*2)";
-	    	+ .wrap--frame__middle {
+	    	+ .wrap--content__third {
 			    flex: 1 1  ~"calc(33% - @{wrap-content-padding}/2)";
-			    margin-left: @wrap-content-padding/2;
 	    	}
 		}
 	}
@@ -303,7 +302,6 @@ body {
 			    flex-wrap: nowrap;
 			}
 			&--content {
-			    margin: 10px auto;
 			    &__toframe {
 			    	padding: 0;
 			    }
