@@ -1,0 +1,93 @@
+mark, ins {
+    background: transparent;
+    text-decoration: none;
+}
+
+#bitnami-banner {
+	display: none;
+}
+
+
+a:active,
+a:hover {
+	color: @button-color-primary;
+}
+
+
+body {
+    background: @background-color !important;
+}
+
+.payment_method_paypal label img,
+.payment_method_paypal label a {
+	display: none;
+}
+
+#ship-to-different-address label {
+	letter-spacing: initial;
+	text-transform: none;
+	font-family: @body-font;
+	&.checked {
+		background-color: #BBB !important;
+		background-image: @icon-radio !important;
+		border-bottom-width: 1px !important;
+		margin-top: 4px !important;
+	}
+}
+
+.cta {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 50px auto 0;
+    border: 4px solid white;
+    border-radius: 100px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 150px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.6), 0 5px 10px rgba(0,0,0,0.6) inset;
+    background: rgba(255,255,255,0.1);
+    transition: all 100ms ease;
+    &:hover {
+        margin-top: 54px;
+        color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.6) inset;
+    }
+}
+
+#order_review_heading {
+	margin-top: 200px;
+}
+
+.woocommerce form {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+        #basicinput()
+    }
+    &.login {
+        max-width: 280px;
+        margin: 0 auto;
+        background: white;
+        border: 0;
+        border-radius: 0;
+        -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.13);
+        box-shadow: 0 1px 30px rgba(0, 0, 0, 0.13);
+        .lost_password {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer {
+    color: white;
+    font-size: 1.3rem;
+}
+
+@media only screen and (min-width: @query-tablet) {
+    .flexboxer--presentation {
+        padding-top: 0;
+    }
+}
