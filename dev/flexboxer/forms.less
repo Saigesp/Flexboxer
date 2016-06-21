@@ -144,6 +144,27 @@
 				color: red;
 			}
 		}
+		.like {
+			display: inline-block;
+			width: auto;
+			background: transparent;
+			padding: 0;
+			min-height: initial;
+			min-width: initial;
+			transition: initial;
+			margin: 0;
+			&:focus {
+    			outline: 0;
+			}
+			&--sep {	
+				vertical-align: middle;
+				font-family: @body-font;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 1.4rem;
+				letter-spacing: 1px;
+			}
+		}
 	}
 	&--submit {
 		min-height: 56px;
@@ -157,6 +178,7 @@
 		min-height: 57px;
 	}
 }
+
 
 
 /**
