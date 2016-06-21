@@ -67,3 +67,70 @@ drop-target.showMe > hr {
 	overflow-y: scroll;
 	height: 200px;
 }
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 400px;
+    background-color: #726B7E;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.list {
+	width: 100%;
+	font-size: 1.4rem;
+	line-height: 26px;
+		&--middle {
+			max-height: 600px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+	}
+
+.sheetinfo {
+	 .wrap--frame {
+		margin: 0;
+		.like {
+			width: ~"calc(100% - 50px)";
+			&--sep:focus {
+				text-transform: none;
+			}
+		}
+	}
+	.date {
+		color: @button-color-secondary;
+		cursor: pointer;
+	}
+
+}
+
+
+@media only screen and (max-width: @query-tablet) {
+	.tooltip .tooltiptext {
+	    visibility: hidden;
+	    width: 300px;
+	    background-color: #726B7E;
+	    color: #fff;
+	    text-align: center;
+	    padding: 5px 0;
+	    border-radius: 6px;
+
+	    position: absolute;
+	    z-index: 1;
+	}
+}
