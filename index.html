@@ -120,6 +120,20 @@
         &lt;div id="footer"&gt;&lt;/div&gt;
     &lt;/body&gt;
           </code></pre>
+          <p>A more accurate structure, with a staked footer will be::</p>
+          <pre><code>
+    &lt;body class="verflex"&gt;
+        &lt;div id="header" class="wrap wrap--header"&gt;&lt;/div&gt;
+        &lt;div id="wrapper" class="verframe"&gt;
+            &lt;div class="flexboxer"&gt;
+                  &lt;section class="wrap wrap--content"&gt;
+                      // Inside box
+                  &lt;/section&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="footer" class="footer"&gt;&lt;/div&gt;
+    &lt;/body&gt;
+          </code></pre>
           <p>Inside <code>#wrapper</code> you can declare the box structure:</p>
           <pre><code>
     &lt;div class="flexboxer"&gt;
