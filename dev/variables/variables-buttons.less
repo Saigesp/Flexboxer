@@ -1,0 +1,70 @@
+#basicbutton() {
+	margin: 0;
+    padding: 10px 20px;
+    min-height: 50px;
+    min-width: 100%;
+    cursor: pointer;
+    border: 0;
+    font-size: inherit;
+    -webkit-appearance: none;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: @button-text-primary;
+    background: @button-color-primary;
+    border-bottom: 5px solid @button-shadow-primary;
+    text-decoration: none;
+    transition: all 200ms ease;
+    backface-visibility: hidden;
+}
+
+#basicinput() {
+    background: rgba(0,0,0,0.1);
+    padding: 5px;
+    border: 0;
+    transition: all 200ms ease;
+    min-height: 45px;
+    min-width: 45px;
+    width: 100%;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+#basiccheckboxlabel() {
+    display: inline-block;
+    height: 45px;
+    min-height: initial;
+    width: 100%;
+    min-width: 45px;
+    line-height: normal;
+    border-bottom: 5px solid #999;
+    background-color: #DDD;
+    background-size: 33px;
+    background-position-x: 5px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 200ms ease;
+    line-height: 45px;
+    font-size: 1.6rem;
+}
+
+#basiccheckbox() {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+#basictextarea() {
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    background: rgba(0,0,0,0.1);
+    line-height: 2;
+}

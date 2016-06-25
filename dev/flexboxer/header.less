@@ -1,0 +1,164 @@
+/**
+ * HEADER
+ ***********************************/
+.wrap--header {
+	height: @header-height;
+	position: relative;
+	z-index: 999;
+	.wrap--frame {
+		margin: 0 auto !important;
+	}
+	.logo {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: @header-height;
+		height: @header-height;
+	}
+	.title {
+		margin: 0;
+    	line-height: @header-height;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		line-height: @header-height;
+	}
+	.menu {
+		li {
+			line-height: @header-height;
+			display: inline-block;
+			a {
+				color: white;
+				&:hover {
+					color: #CCC;
+				}
+			}
+			+ li {
+				margin-left: 20px;
+			}
+		}
+	}
+	.icon {
+		height: 30px;
+		width: 30px;
+		padding: 5px;
+		opacity: 0.9;
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: top;
+		transition: opacity 200ms ease;
+		&:hover {
+			opacity: 0.6;
+		}
+		&--menu {
+		    position: absolute;
+		    top: 0;
+		    z-index: 1;
+			&__left { left: 0;}
+			&__right { right: 0;}
+		}
+		&--user {
+			padding: 0;
+		}
+	}
+	.wrap--cart {
+		position: absolute;
+		top: 0;
+		right: 60px;
+		width: 60px;
+		height: 60px;
+		z-index: 1;
+		overflow: hidden;
+		> div {
+			> a {
+				width: 60px;
+				height: 60px;
+				display: block;
+				cursor: pointer;
+			}
+			position: relative;
+			.icon--cart {
+			}
+			.totalitems {
+				background: #E50707;
+				color: white;
+				font-size: 1.2rem;
+				line-height: 20px;
+				display: block;
+				width: 20px;
+				position: absolute;
+				height: 20px;
+				overflow: hidden;
+				text-align: center;
+				border-radius: 20px;
+				right: 8px;
+				top: 32px;
+				z-index: 2;
+				transition: opacity 200ms ease;
+			}
+		}
+		&:hover {
+			.icon,
+			.totalitems {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+
+@media only screen and (min-width: @query-mobile) {
+
+}
+
+@media only screen and (min-width: @query-tablet) {
+
+	.wrap--header {
+		height: @header-height-desktop;
+		h2 {
+			margin: 0;
+	    	line-height: @header-height-desktop;
+		}
+		.logo {
+			margin-left: @header-height-desktop;
+			height: @header-height-desktop;
+			.title {
+				font-size: 2.4rem;
+				line-height: @header-height-desktop;
+			}
+		}
+		.menu {
+			li {
+				line-height: @header-height-desktop;
+			}
+		}
+		.icon {
+			padding: 15px;
+			&--user {
+				padding: 0;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: @query-desktop) {
+	.wrap--header {
+		.icon--hamburguer {
+			display: none;
+		}
+		.logo {
+			margin-left: 10px;
+		}
+	}
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
+}

@@ -20,11 +20,6 @@ body {
 	background-color: @background-color;
 }
 
-#main {
-	position: relative;
-	min-height: ~"calc(100% - @{header-height} - @{header-height})";
-}
-
 #footer {
 	min-height: @footer-height;
 	background-color: @footer-color;
@@ -35,7 +30,6 @@ body {
 #header {
 	background: @header-color;
 	color: white;
-	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 
 #navleft {
@@ -241,18 +235,6 @@ body {
 	margin-top: 10px;
 }
 
-
-.verflex {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	.verframe {
-		flex: 1;
-	}
-}
-
-
-
 /**
  * MEDIA QUERYS
  *************************************************************************************************/
@@ -340,16 +322,6 @@ body {
 @media only screen and (min-width: @query-desktop) {
 	body {
 		background: @menu-color;
-	}
-
-	#main,
-	.wrap--footer {
-		margin-left: @menu-side-width;
-		background: @background-color;
-	}
-
-	#main {
-		    min-height: ~"calc(100% - @{header-height-desktop})";
 	}
 
 	.flexboxer {
