@@ -1589,7 +1589,7 @@ button.secondary:focus {
   letter-spacing: 1px;
 }
 .wrap--submit {
-  min-height: 56px;
+  min-height: 58px;
   text-align: right;
   margin-top: 5px;
 }
@@ -1598,7 +1598,7 @@ button.secondary:focus {
 }
 .wrap--checkbox,
 .wrap--buttons {
-  min-height: 56px;
+  min-height: 58px;
 }
 /**
  * MEDIA QUERYS
@@ -1608,7 +1608,7 @@ button.secondary:focus {
     min-width: initial;
   }
   .wrap--form select {
-    min-height: 56px;
+    min-height: 58px;
   }
 }
 @media only screen and (min-width: 780px) {
