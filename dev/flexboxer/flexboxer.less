@@ -17,7 +17,7 @@ body {
 	left: 0;
 	margin: 0;
 	min-height: 100vh;
-	background-color: @background-color;
+	background: @background-color !important;
 }
 
 #footer {
@@ -274,12 +274,13 @@ body {
 		min-height: ~"calc(100% - @{header-height-desktop} - @{header-height})";
 	}
 
+	.wrap--shadow {
+		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+		box-shadow: 0 1px 3px rgba(0,0,0,.13);
+	}
+
 	.flexboxer{
 		.wrap {
-			&--shadow {
-			    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
-		    	box-shadow: 0 1px 3px rgba(0,0,0,.13);
-			}
 			&--flex {
 			    flex-wrap: nowrap;
 			}

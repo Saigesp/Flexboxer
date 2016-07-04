@@ -22,22 +22,22 @@
 					#basiccheckboxlabel;
 					background-image: @icon-checkbox-grey;
 				&:hover {
-					background-color: #AAA;
-					color: white;
+					background-color: @checkbox-background-hover;
+					color: @checkbox-color-hover;
 					background-image: @icon-checkbox-white;
 				}
 				span {
-					margin: 0 15px 0 45px;
+					margin: 0 15px 0 @input-width-min;
 				}
 			}
 			&:focus + label {
-				color: white;
+				color: @checkbox-color-hover;
 			}
 			&:checked + label {
-				background-color: #BBB;
+				background-color: @checkbox-background-checked;
 				background-image: @icon-checkbox;
-				border-bottom-width: 1px;
-				margin-top: 4px;
+				border-bottom-width: @button-border-width-checked;
+				margin-top: @button-border-width - @button-border-width-checked;
 			}
 		}
 		input[type="radio"] {
@@ -50,24 +50,24 @@
 					color: white;
 				}
 				span {
-					margin: 0 15px 0 45px;
+					margin: 0 15px 0 @input-width-min;
 				}
 			}
 			&:focus + label {
-				color: white;
+				color: @checkbox-color-hover;
 			}
 			&:checked + label {
-				background-color: #BBB;
+				background-color: @checkbox-background-checked;
 				background-image: @icon-radio;
-				border-bottom-width: 1px;
-				margin-top: 4px;
+				border-bottom-width: @button-border-width-checked;
+				margin-top: @button-border-width - @button-border-width-checked;
 			}
 		}
 		select{
 			#basicinput;
 			font-size: 1.6rem;
 			width: 100%;
-			min-height: 55px;
+			min-height: @input-height-min + 10px;
 			option {
 				font-size: inherit;
 			}
@@ -83,8 +83,8 @@
 		}
 		label,
 		span {
-			min-height: 45px;
-			line-height: 45px;
+			min-height: @input-height-min;
+			line-height: @input-height-min;
 			font-size: inherit;
 		}
 		label {
@@ -119,15 +119,16 @@
 		}
 	}
 	&--submit {
-		min-height: 56px;
+		min-height: @wrap-submit-height-min;
 		text-align: right;
 		margin-top: 5px;
 		&__spaced {
 			margin-top: 76px !important;
 		}
 	}
-	&--checkbox {
-		min-height: 57px;
+	&--checkbox,
+	&--buttons {
+		min-height: @wrap-submit-height-min;
 	}
 }
 
@@ -143,7 +144,7 @@
 			min-width: initial;
 		}
 		select {
-			min-height: 45px;
+			min-height: @wrap-submit-height-min;
 		}
 	}
 }

@@ -1,12 +1,3 @@
-/**
- * Project: flexboxer 
- * Version: v0.1.10.2
- * Description: Ultra responsive CSS Framework based on flex display
- * Author: Saigesp
- * Author email: saigesp@saigesp.es
- * Licence: MIT
- * Web: https://github.com/Saigesp/Flexboxer#readme
- */
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300);
 * {
   font-weight: 100;
@@ -119,11 +110,13 @@ body {
   background: #f5f5f5;
 }
 a {
-  color: #14344f;
+  color: #FE6FCA;
   text-decoration: none;
+  cursor: pointer;
 }
 a:focus {
   outline: 0;
+  color: #FE6FCA;
 }
 a:hover,
 a:active {
@@ -131,7 +124,7 @@ a:active {
 }
 a:active,
 a:hover {
-  color: #41a62a;
+  color: #FE6FCA;
 }
 h1,
 h2,
@@ -419,6 +412,11 @@ li {
   margin: 0;
   padding: 0;
 }
+mark,
+ins {
+  background: transparent;
+  text-decoration: none;
+}
 /**
  * MIXINS
  ***********************************/
@@ -446,7 +444,7 @@ body {
   left: 0;
   margin: 0;
   min-height: 100vh;
-  background-color: white;
+  background: white !important;
 }
 #footer {
   min-height: 40px;
@@ -693,7 +691,7 @@ body {
   #main {
     min-height: calc(100% - 60px - 40px);
   }
-  .flexboxer .wrap--shadow {
+  .wrap--shadow {
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
   }
@@ -777,11 +775,11 @@ body {
 /**
  * FLEXBOXER VERTICAL
  ***********************************/
-.wrep__flex {
+.wrep--flex {
   display: flex;
   flex-direction: column;
 }
-.wrep__frame {
+.wrep--frame {
   flex: 1;
 }
 /**
@@ -796,7 +794,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 1.3846153846;
 }
 h2 {
@@ -805,7 +803,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 1;
 }
 h3 {
@@ -814,7 +812,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 22px;
+  font-size: 2.2rem;
   line-height: 1.0909090909;
 }
 h4 {
@@ -823,7 +821,7 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 20px;
+  font-size: 2.0rem;
   line-height: 1.2;
 }
 h5 {
@@ -832,7 +830,7 @@ h5 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.3333333333;
 }
 h6 {
@@ -841,7 +839,7 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 .sep {
@@ -907,6 +905,11 @@ h6 {
 .text--center {
   text-align: center;
 }
+mark,
+ins {
+  background: transparent;
+  text-decoration: none;
+}
 /**
  * MEDIA QUERYS
  *************************************************************************************************/
@@ -933,7 +936,6 @@ h6 {
 .wrap--header .logo {
   display: inline-block;
   vertical-align: top;
-  margin-left: 40px;
   height: 40px;
 }
 .wrap--header .title {
@@ -980,6 +982,11 @@ h6 {
 }
 .wrap--header .icon--menu__right {
   right: 0;
+}
+.wrap--header .icon--menu__inline {
+  display: inline-block;
+  position: relative;
+  top: initial;
 }
 .wrap--header .icon--user {
   padding: 0;
@@ -1094,6 +1101,20 @@ h6 {
 }
 .menu--top ul.menu li a:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+.menu--top .icon {
+  transition: opacity 200ms ease;
+}
+.menu--top .icon--close {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0.3;
+}
+.menu--top .icon--close:hover {
+  opacity: 1;
 }
 .menu--side {
   position: absolute;
@@ -1400,6 +1421,8 @@ button.secondary:focus {
   min-width: 45px;
   width: 100%;
   font-size: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .wrap--form input:required.ng-dirty.ng-invalid,
@@ -1434,6 +1457,7 @@ button.secondary:focus {
   transition: all 200ms ease;
   line-height: 45px;
   font-size: 1.6rem;
+  color: #333;
   background-image: url('../../assets/img/icons/check-grey.svg');
 }
 .wrap--form input[type="checkbox"] + label:hover {
@@ -1478,6 +1502,7 @@ button.secondary:focus {
   transition: all 200ms ease;
   line-height: 45px;
   font-size: 1.6rem;
+  color: #333;
   background-image: url('../../assets/img/icons/radio-grey.svg');
 }
 .wrap--form input[type="radio"] + label:hover {
@@ -1504,6 +1529,8 @@ button.secondary:focus {
   min-height: 45px;
   min-width: 45px;
   font-size: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 1.6rem;
   width: 100%;
@@ -1569,8 +1596,9 @@ button.secondary:focus {
 .wrap--submit__spaced {
   margin-top: 76px !important;
 }
-.wrap--checkbox {
-  min-height: 57px;
+.wrap--checkbox,
+.wrap--buttons {
+  min-height: 56px;
 }
 /**
  * MEDIA QUERYS
@@ -1580,7 +1608,7 @@ button.secondary:focus {
     min-width: initial;
   }
   .wrap--form select {
-    min-height: 45px;
+    min-height: 56px;
   }
 }
 @media only screen and (min-width: 780px) {
@@ -1687,6 +1715,11 @@ button.secondary:focus {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.list--scroll__ylarge {
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 .list--toselect .itemlist {
   cursor: pointer;
 }
@@ -1714,6 +1747,9 @@ button.secondary:focus {
   line-height: 0;
   text-align: right;
 }
+.list > .item .wrap--buttons__left {
+  text-align: left;
+}
 .list > .item:nth-child(odd) {
   background: rgba(0, 0, 0, 0.1);
 }
@@ -1739,7 +1775,7 @@ button.secondary:focus {
   width: 35px;
   height: 35px;
   min-width: 35px;
-  background-size: 24px;
+  background-size: 25px;
   background-color: white;
 }
 /**
@@ -2126,41 +2162,6 @@ button.secondary:focus {
     opacity: 1;
   }
 }
-/**
- * SLIDER
- ***********************************/
-.slider--flickity {
-  height: 600px;
-  width: 100%;
-  overflow: hidden;
-}
-.slider--flickity .carousel-cell {
-  width: 100%;
-  height: 600px;
-}
-.slider--flickity__small {
-  height: 120px;
-}
-.slider--flickity__small .carousel-cell {
-  width: auto;
-  height: 120px;
-}
-.slider--flickity__small .carousel-cell img {
-  height: 100%;
-  width: auto;
-}
-.slider--flickity button {
-  min-width: initial;
-  min-height: initial;
-  background: transparent;
-  margin: 0;
-}
-.slider--flickity button:hover {
-  background: transparent;
-}
-.slider--flickity button .arrow {
-  fill: rgba(255, 255, 255, 0.6);
-}
 code {
   background: rgba(0, 0, 0, 0.05);
   padding: 4px 6px;
@@ -2324,6 +2325,7 @@ pre code {
   transition: all 200ms ease;
   line-height: 45px;
   font-size: 1.6rem;
+  color: #333;
   width: auto;
   background-image: url('../../assets/img/icons/radio-grey.svg');
   padding: 0 15px 0 45px;
@@ -2535,13 +2537,33 @@ pre code {
   min-width: 45px;
   width: 100%;
   font-size: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .wpcf7-form input[type="submit"] {
-  background: #222;
-}
-.wpcf7-form input[type="submit"]:hover {
-  background: black;
+  margin: 0;
+  padding: 10px 20px;
+  min-height: 50px;
+  min-width: 100%;
+  cursor: pointer;
+  border: 0;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #245A3C;
+  background: #5FD694;
+  border-bottom: 5px solid #46A26F;
+  text-decoration: none;
+  transition: all 200ms ease;
+  backface-visibility: hidden;
+  width: auto;
+  min-width: 220px;
 }
 .wpcf7-form textarea {
   width: 100%;
@@ -2549,6 +2571,10 @@ pre code {
   padding: 15px;
   background: rgba(0, 0, 0, 0.1);
   line-height: 2;
+}
+.wpcf7-form div.wpcf7-response-output {
+  border: 0;
+  padding: 0;
 }
 .cdp-cookies-alerta {
   top: initial !important;
@@ -2599,17 +2625,49 @@ pre code {
 .select2-results {
   background: #DDD;
 }
+/**
+ * SLIDER
+ ***********************************/
+.slider--flickity {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+.slider--flickity .carousel-cell {
+  /* width: 100%; */
+  height: 600px;
+}
+.slider--flickity .carousel-cell img {
+  /* width: 100%; */
+  height: 100%;
+}
+.slider--flickity__small {
+  height: 120px;
+}
+.slider--flickity__small .carousel-cell {
+  width: auto;
+  height: 120px;
+}
+.slider--flickity__small .carousel-cell img {
+  height: 100%;
+  width: auto;
+}
+.slider--flickity button {
+  min-width: initial;
+  min-height: initial;
+  background: transparent;
+  margin: 0;
+}
+.slider--flickity button:hover {
+  background: transparent;
+}
+.slider--flickity button .arrow {
+  fill: rgba(255, 255, 255, 0.6);
+}
 mark,
 ins {
   background: transparent;
   text-decoration: none;
-}
-a {
-  color: #FE6FCA;
-}
-a:active,
-a:hover {
-  color: #FE6FCA;
 }
 body {
   background: white !important;

@@ -23,7 +23,7 @@ var banner = ['/**',
 gulp.task('less', function() {  
   gulp.src('./dev/style.less')
     .pipe(less())
-    .pipe(header(banner, {pkg: pkg}))
+    //.pipe(header(banner, {pkg: pkg}))
     .pipe(gulp.dest('./assets/styles/'));
 });
 

@@ -4,16 +4,21 @@
 .list {
 	width: 100%;
 	font-size: 1.4rem;
-	line-height: 26px;
+	line-height: @list-line-height;
 	&--scroll {
-		border: 1px solid rgba(0,0,0,0.1);
+		border: @list-scroll-border;
 		&__x {
 			max-width: 100%;
 			overflow-x: scroll;
 			overflow-y: hidden;
 		}
 		&__y {
-			max-height: 300px;
+			max-height: @list-scroll-y-height;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		&__ylarge {
+			max-height: @list-scroll-ylarge-height;
 			overflow-y: scroll;
 			overflow-x: hidden;
 		}
@@ -43,39 +48,42 @@
 		padding: 5px 10px;
 		.wrap {
 			line-height: 44px;
-		}
-		.wrap--buttons {
-			line-height: 0;
-			text-align: right;
+			&--buttons {
+				line-height: 0;
+				text-align: right;
+				&__left {
+					text-align: left;
+				}
+			}
 		}
 		&:nth-child(odd) {
-			background: rgba(0,0,0,0.1);
+			background: @list-item-odd-background-color;
 		}
 		+ .item {
 			margin: 0;
 		}
 	}
 	.icon {
-		width: 24px;
+		width: @list-icon-width;
 		height: auto;
-		padding: 10px;
+		padding: @list-icon-padding;
 		box-sizing: content-box;
 		cursor: pointer;
-		opacity: 0.5;
+		opacity: @list-icon-opacity;
 		transition: opacity 200ms ease;
 		&:hover {
-			opacity: 0.9;
+			opacity: @list-icon-opacity-hover;
 		}
 	}
 	a {
 		text-decoration: none;
 	}
 	input[type="checkbox"] + label {
-		width: 35px;
-		height: 35px;
-		min-width: 35px;
-		background-size: 24px;
-		background-color: white;
+		width: @list-checkbox-width;
+		height: @list-checkbox-width;
+		min-width: @list-checkbox-width;
+		background-size: @list-checkbox-width - 10px;
+		background-color: @list-checkbox-background-color;
 	}
 }
 
