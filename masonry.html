@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexboxer</title>
+    <meta name="description" content="Smart Mood | Smell Good">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="robots" content="INDEX,follow">
+    <meta name="copyright" content="">
+    <meta name="revisit-after" content="7 days">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary"> 
+    <meta name="twitter:site" content="@"> 
+    <meta name="twitter:creator" content="@"> 
+    <meta name="google-site-verification" content="">
+    <meta name="twitter:title" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="./assets/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./assets/img/favicon/manifest.json">
+    <link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="./assets/img/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="verflex">
+    <div id="header" class="wrap wrap--header wrap--shadow">
+      <div class="flexboxer">
+        <div class="wrap wrap--frame wrap--flex">
+          <div class="wrap wrap--frame__middle">
+            <a href="">
+              <img src="./assets/img/logo.svg" alt="Logo" class="logo">
+            </a>
+          </div>
+          <div class="wrap wrap--frame__middle text--right">
+            <ul class="menu">
+              <li>
+                <a href=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- end of #header -->
+    <div id="wrapper" class="verframe">
+      
+      <div class="flexboxer">
+
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Masonry structure</h1>
+          <p>The general <strong>masonry</strong> layout looks like:</p>
+          <pre><code>
+    &lt;div id="wrap wrap--masonry"&gt;
+        &lt;div class="wrap wrap--content"&gt; item &lt;/div&gt;
+    &lt;/div&gt;
+          </code></pre>
+          <p>A more accurate structure will be:</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry"&gt;
+        &lt;wrap wrap--content wrap--content__middle"&gt; item 1 &lt;/div&gt;
+        &lt;wrap wrap--content wrap--content__middle"&gt; item 2 &lt;/div&gt;
+        ...and more...
+    &lt;/section&gt;
+          </code></pre>
+          <p>This will looks like:</p>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry">
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #A3DB42; color: white;">
+            item 1
+          </div>
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #A3DB42; color: white;">
+            item 2
+          </div>
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #A3DB42; color: white;">
+            item 3
+          </div>
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #A3DB42; color: white;">
+            item 4
+          </div>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>And if you use <code>wrap--content__third</code> you get:</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry"&gt;
+        &lt;wrap wrap--content wrap--content__third"&gt; item &lt;/div&gt;
+        ...and more...
+    &lt;/section&gt;
+          </code></pre>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry">
+          <div class="wrap wrap--content wrap--content__third" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__third" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__third" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__third" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__third" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__third" style="background-color: #A3DB42; color: white;">item</div>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>...and <code>wrap--content__fourth</code>...</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry"&gt;
+        &lt;wrap wrap--content wrap--content__fourth"&gt; item &lt;/div&gt;
+        ...and more...
+    &lt;/section&gt;
+          </code></pre>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry">
+          <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #528EDB; color: white;">If I fit, I sit</div>
+          <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>...even <code>wrap--content__fifth</code>...</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry"&gt;
+        &lt;wrap wrap--content wrap--content__fifth"&gt; item &lt;/div&gt;
+        ...and more...
+    &lt;/section&gt;
+          </code></pre>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry">
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--frame   wrap--frame__fifth  " style="background-color: #C443DB; color: white;">Frames will not die!</div>
+          <div class="wrap wrap--content wrap--content__fifth" style="background-color: #A3DB42; color: white;">item</div>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>...even <code>wrap--content__100</code>...</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry"&gt;
+        &lt;wrap wrap--content wrap--content__100"&gt; item &lt;/div&gt;
+        ...and more...
+    &lt;/section&gt;
+          </code></pre>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry">
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+        </section>
+
+        <section class="wrap wrap--content">
+          <p>...aaand even <code>wrap--content__45</code>. Why 45px? Because if the recommended minimal touch area mobile.</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry"&gt;
+        &lt;wrap wrap--content wrap--content__45"&gt; item &lt;/div&gt;
+        ...and more...
+    &lt;/section&gt;
+          </code></pre>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry">
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+          <div class="wrap wrap--frame wrap--frame__45" style="background-color: #A3DB42;"><img width="45" height="45" src="./assets/img/logo.svg" alt="Logo" class="logo"></div>
+        </section>
+
+        <section class="wrap wrap--content wrap--spaced wrap--spaced__top">
+          <h1>Items with fixed width</h1>
+          <p>You hate these prepotent selfmade containers who grow until they can, dont you?</p>
+          <p>Don't worry bro. Append <code>wrap--masonry__nogrow</code> in the parent wrap:</p>
+          <pre><code>
+    &lt;section class="wrap wrap--frame wrap--masonry wrap--masonry__nogrow"&gt;
+        &lt;wrap wrap--content wrap--content__fifth"&gt; item &lt;/div&gt;
+        ...and more...
+    &lt;/section&gt;
+          </code></pre>
+        </section>
+
+        <section class="wrap wrap--frame wrap--masonry wrap--masonry__nogrow">
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+          <div class="wrap wrap--content wrap--content__100" style="background-color: #A3DB42; color: white;">item</div>
+        </section>
+
+      </div>
+
+    </div><!-- end of wrapper -->
+  
+    <!-- footer -->
+    <footer id="footer" class="wrap wrap--footer">
+      <div class="flexboxer">
+        <div class="wrap wrap--frame wrap--flex">
+          <div class="wrap wrap--frame__middle">
+            <ul>
+              <li>CC 2016 <a href="https://twitter.com/Saigesp">Saigesp</a></li>
+            </ul>
+          </div>
+          <div class="wrap wrap--frame__middle text--right">
+            <ul>
+              <li>
+              <a href="https://twitter.com/Saigesp"><img src="./assets/img/icons/twitter-white.svg" alt="@Saigesp" class="icon icon--rrss"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer> <!-- end footer -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="./assets/js/app.js"></script>
+  </body>
+</html>

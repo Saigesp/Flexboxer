@@ -502,7 +502,7 @@ body {
   flex: 1 1 100%;
   margin: 10px auto;
 }
-.flexboxer .wrap--frame__decim {
+.flexboxer .wrap--frame__decimal {
   flex: 1 1 10%;
 }
 .flexboxer .wrap--frame__85 {
@@ -571,15 +571,6 @@ body {
   line-height: 35px;
   padding: 5px 10px 5px 0;
   color: inherit;
-}
-.flexboxer .wrap--masonry {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.flexboxer .wrap--masonry > .wrap {
-  flex: 1 1 300px;
-  margin: 5px;
 }
 .flexboxer > .wrap {
   margin-top: 10px;
@@ -1975,6 +1966,129 @@ button.secondary:focus {
 @media only screen and (min-width: 780px) {
   .list--editmenu .item .wrap {
     margin: 10px auto;
+  }
+}
+/**
+ * MASONRY
+ ***********************************/
+.wrap--masonry {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.wrap--masonry > .wrap {
+  box-sizing: border-box;
+  margin: 5px;
+}
+.wrap--masonry > .wrap--content {
+  flex: 1 0 calc(100% - 5px*2);
+}
+.wrap--masonry > .wrap--frame {
+  flex: 1 1 calc(100% - 5px*2);
+}
+.wrap--masonry > .wrap--frame__decim {
+  flex: 1 1 calc(10% - 5px*2);
+}
+.wrap--masonry > .wrap--frame__85 {
+  flex: 0 1 100px;
+}
+.wrap--masonry > .wrap--frame__100 {
+  flex: 0 1 100px;
+}
+.wrap--masonry > .wrap--frame__150 {
+  flex: 0 1 150px;
+}
+.wrap--masonry__nogrow > .wrap--frame,
+.wrap--masonry__nogrow > .wrap--content {
+  flex-grow: 0 !important;
+}
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+@media only screen and (min-width: 550px) {
+  .wrap--masonry .wrap--frame__middle {
+    flex: 1 1 calc(50% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__middle + .wrap--frame__middle {
+    flex: 1 1 calc(50% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__middle {
+    flex: 1 1 calc(50% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__middle + .wrap--content__middle {
+    flex: 1 1 calc(50% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__third {
+    flex: 1 1 calc(33% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__third + .wrap--frame__third {
+    flex: 1 1 calc(33% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__third {
+    flex: 1 1 calc(33% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__third + .wrap--content__third {
+    flex: 1 1 calc(33% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__fourth {
+    flex: 1 1 calc(25% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__fourth + .wrap--frame__fourth {
+    flex: 1 1 calc(25% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__fourth {
+    flex: 1 1 calc(25% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__fourth + .wrap--content__fourth {
+    flex: 1 1 calc(25% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__fifth {
+    flex: 1 1 calc(20% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__fifth + .wrap--frame__fifth {
+    flex: 1 1 calc(20% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__fifth {
+    flex: 1 1 calc(20% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__fifth + .wrap--content__fifth {
+    flex: 1 1 calc(20% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__decimal {
+    flex: 1 1 calc(10% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__decimal + .wrap--frame__decimal {
+    flex: 1 1 calc(10% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__decimal {
+    flex: 1 1 calc(10% - 5px*2);
+  }
+  .wrap--masonry .wrap--content__decimal + .wrap--content__decimal {
+    flex: 1 1 calc(10% - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__100 {
+    flex: 1 1 calc(100px - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__100 + .wrap--frame__100 {
+    flex: 1 1 calc(100px - 5px*2);
+  }
+  .wrap--masonry .wrap--content__100 {
+    flex: 1 1 calc(100px - 5px*2);
+  }
+  .wrap--masonry .wrap--content__100 + .wrap--content__100 {
+    flex: 1 1 calc(100px - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__45 {
+    flex: 1 1 calc(45px - 5px*2);
+  }
+  .wrap--masonry .wrap--frame__45 + .wrap--frame__45 {
+    flex: 1 1 calc(45px - 5px*2);
+  }
+  .wrap--masonry .wrap--content__45 {
+    flex: 1 1 calc(45px - 5px*2);
+  }
+  .wrap--masonry .wrap--content__45 + .wrap--content__45 {
+    flex: 1 1 calc(45px - 5px*2);
   }
 }
 .breadcrumbs {
