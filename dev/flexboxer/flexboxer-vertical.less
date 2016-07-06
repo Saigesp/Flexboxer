@@ -2,7 +2,7 @@
 /**
  * FLEXBOXER VERTICAL
  ***********************************/
-.wrep--flex {
+.wrap--vertical {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
@@ -12,13 +12,16 @@
 		margin-bottom: 0 !important;
 		&--frame {
 			width: 100%;
+			&__full {
+				flex: 1 !important;
+			}
 		}
 		&--content {
 			width: ~"calc(100% - @{wrap-content-padding}*2)";
+			&__full {
+				flex: 1 !important;
+			}
 		}
-	}
-	> .wrep--frame {
-		flex: 1 !important;
 	}
 }
 

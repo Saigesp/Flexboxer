@@ -766,23 +766,26 @@ body {
 /**
  * FLEXBOXER VERTICAL
  ***********************************/
-.wrep--flex {
+.wrap--vertical {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
-.wrep--flex > .wrap {
+.wrap--vertical > .wrap {
   flex: 0 !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.wrep--flex > .wrap--frame {
+.wrap--vertical > .wrap--frame {
   width: 100%;
 }
-.wrep--flex > .wrap--content {
+.wrap--vertical > .wrap--frame__full {
+  flex: 1 !important;
+}
+.wrap--vertical > .wrap--content {
   width: calc(100% - 20px*2);
 }
-.wrep--flex > .wrep--frame {
+.wrap--vertical > .wrap--content__full {
   flex: 1 !important;
 }
 /**
