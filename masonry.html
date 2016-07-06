@@ -38,6 +38,15 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body class="verflex">
+
+    <div id="menutop" class="menu menu--top js-menu animecubic550">
+      <img src="./assets/img/icons/close-white.svg" alt="Close menu" class="icon icon--close" onclick="ToggleMenu('close')">
+      <ul class="menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">b</a></li>
+      </ul>
+    </div>
+  
     <div id="header" class="wrap wrap--header wrap--shadow">
       <div class="flexboxer">
         <div class="wrap wrap--frame wrap--flex">
@@ -50,6 +59,9 @@
             <ul class="menu">
               <li>
                 <a href=""></a>
+              </li>
+              <li>
+                <img src="./assets/img/icons/hamburguer-white.svg" alt="Menú" class="icon icon--menu icon--menu__inline" onclick="ToggleMenu('menutop')">
               </li>
             </ul>
           </div>
@@ -126,7 +138,7 @@
         <section class="wrap wrap--frame wrap--masonry">
           <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
           <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
-          <div class="wrap wrap--content wrap--content__middle" style="background-color: #528EDB; color: white;">If I fit, I sit</div>
+          <div class="wrap wrap--content wrap--content__middle" style="background-color: #528EDB; color: white;">If I fit, I sit (wrap--content__middle)</div>
           <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
           <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
           <div class="wrap wrap--content wrap--content__fourth" style="background-color: #A3DB42; color: white;">item</div>
@@ -192,7 +204,7 @@
         </section>
 
         <section class="wrap wrap--content">
-          <p>...aaand even <code>wrap--content__45</code>. Why 45px? Because if the recommended minimal touch area mobile.</p>
+          <p>...aaand even <code>wrap--content__45</code>. Why 45px? Because is a good minimal size for buttons in mobile sizes.</p>
           <pre><code>
     &lt;section class="wrap wrap--frame wrap--masonry"&gt;
         &lt;wrap wrap--content wrap--content__45"&gt; item &lt;/div&gt;

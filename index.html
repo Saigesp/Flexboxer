@@ -38,6 +38,15 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body class="verflex">
+
+    <div id="menutop" class="menu menu--top js-menu animecubic550">
+      <img src="./assets/img/icons/close-white.svg" alt="Close menu" class="icon icon--close" onclick="ToggleMenu('close')">
+      <ul class="menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">b</a></li>
+      </ul>
+    </div>
+  
     <div id="header" class="wrap wrap--header wrap--shadow">
       <div class="flexboxer">
         <div class="wrap wrap--frame wrap--flex">
@@ -50,6 +59,9 @@
             <ul class="menu">
               <li>
                 <a href=""></a>
+              </li>
+              <li>
+                <img src="./assets/img/icons/hamburguer-white.svg" alt="Menú" class="icon icon--menu icon--menu__inline" onclick="ToggleMenu('menutop')">
               </li>
             </ul>
           </div>
