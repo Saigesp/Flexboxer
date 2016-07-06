@@ -769,9 +769,21 @@ body {
 .wrep--flex {
   display: flex;
   flex-direction: column;
+  min-height: 100%;
 }
-.wrep--frame {
-  flex: 1;
+.wrep--flex > .wrap {
+  flex: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.wrep--flex > .wrap--frame {
+  width: 100%;
+}
+.wrep--flex > .wrap--content {
+  width: calc(100% - 20px*2);
+}
+.wrep--flex > .wrep--frame {
+  flex: 1 !important;
 }
 /**
  * MEDIA QUERYS

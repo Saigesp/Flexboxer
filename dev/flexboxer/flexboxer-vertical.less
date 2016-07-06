@@ -2,13 +2,23 @@
 /**
  * FLEXBOXER VERTICAL
  ***********************************/
-.wrep {
-	&--flex {
-		display: flex;
-		flex-direction: column;
+.wrep--flex {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	> .wrap {
+		flex: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		&--frame {
+			width: 100%;
+		}
+		&--content {
+			width: ~"calc(100% - @{wrap-content-padding}*2)";
+		}
 	}
-	&--frame {
-		flex: 1;
+	> .wrep--frame {
+		flex: 1 !important;
 	}
 }
 
