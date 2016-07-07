@@ -696,8 +696,14 @@ body {
     width: 100%;
     max-width: calc(100% - 20px*3);
   }
+  .flexboxer .wrap--content.wrap--vertical {
+    margin: 0 auto;
+  }
   .flexboxer .wrap--frame {
     margin: 10px auto;
+  }
+  .flexboxer .wrap--frame.wrap--vertical {
+    margin: 0 auto;
   }
   .flexboxer > .wrap:first-child {
     margin-top: 20px;
