@@ -75,6 +75,9 @@ body {
 			padding: @wrap-content-padding;
 			flex: 1 0 ~"calc(100% - @{wrap-content-padding}*2)";
 			margin: 10px auto;
+			&.wrap--vertical {
+				margin: 0 auto;
+			}
 		}
 		&--frame  {
 			padding: 0;
@@ -224,6 +227,10 @@ body {
 
 .wrap--flex + .wrap--flex {
 	margin-top: 10px;
+}
+
+.wrap--content.wrap--vertical {
+		margin: 0 auto;
 }
 
 /**
