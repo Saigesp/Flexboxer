@@ -68,15 +68,18 @@ body {
 		&--content {
 			padding: @wrap-content-padding;
 			flex: 1 0 ~"calc(100% - @{wrap-content-padding}*2)";
-			margin: 10px auto;
+			margin-left: auto;
+			margin-right: auto;
 			&.wrap--vertical {
-				margin: 0 auto;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 		&--frame  {
 			padding: 0;
 		    flex: 1 1 100%;
-		    margin: 10px auto;
+		    margin-left: auto;
+			margin-right: auto;
 			&__decimal { flex: 1 1 10%; }
 			&__45    { flex: 0 1  45px; }
 			&__85    { flex: 0 1  85px; }
@@ -150,16 +153,8 @@ body {
 	> .wrap {
 		width: 100%;
 		box-sizing: border-box;
-	    margin-top: 10px;
-	    margin-bottom: 10px;
 	    position: relative;
 	    .animecubic350;
-	    &:first-child{
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 20px;
-		}
 		.icon--corner{
 			position: absolute;
 		    top: 0;
@@ -185,7 +180,7 @@ body {
 			> h3 {
 				&:first-of-type {
 					cursor: pointer;
-					margin-top: -3px !important;
+					margin-top: 0 !important;
 					margin-bottom: 30px;
 				}
 				&:after {
@@ -228,12 +223,9 @@ body {
 
 }
 
-.wrap--flex + .wrap--flex {
-	margin-top: 10px;
-}
-
 .wrap--content.wrap--vertical {
-		margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .wrap--transparent {

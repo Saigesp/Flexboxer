@@ -546,15 +546,18 @@ body {
 .flexboxer .wrap--content {
   padding: 20px;
   flex: 1 0 calc(100% - 20px*2);
-  margin: 10px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .flexboxer .wrap--content.wrap--vertical {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .flexboxer .wrap--frame {
   padding: 0;
   flex: 1 1 100%;
-  margin: 10px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .flexboxer .wrap--frame__decimal {
   flex: 1 1 10%;
@@ -636,19 +639,11 @@ body {
 .flexboxer > .wrap {
   width: 100%;
   box-sizing: border-box;
-  margin-top: 10px;
-  margin-bottom: 10px;
   position: relative;
   -webkit-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
   -moz-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
   -o-transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
   transition: all 350ms cubic-bezier(1, -0.5, 0.5, 1);
-}
-.flexboxer > .wrap:first-child {
-  margin-top: 0;
-}
-.flexboxer > .wrap:last-child {
-  margin-bottom: 20px;
 }
 .flexboxer > .wrap .icon--corner {
   position: absolute;
@@ -675,7 +670,7 @@ body {
 }
 .flexboxer > .wrap--collapse > h3:first-of-type {
   cursor: pointer;
-  margin-top: -3px !important;
+  margin-top: 0 !important;
   margin-bottom: 30px;
 }
 .flexboxer > .wrap--collapse > h3:after {
@@ -710,11 +705,9 @@ body {
 .flexboxer > .wrap--collapse.active > h3:hover:after {
   border-left: 6px solid rgba(0, 0, 0, 0.5);
 }
-.wrap--flex + .wrap--flex {
-  margin-top: 10px;
-}
 .wrap--content.wrap--vertical {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .wrap--transparent {
   background: transparent !important;
