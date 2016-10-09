@@ -1,0 +1,187 @@
+@meeseeks-background-color: 			#333;
+@meeseeks-text-color: 					white;
+
+
+/**
+ * MR MEESEEKS
+ ***********************************/
+.wrap--meeseeks {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	width: 100%;
+	background-color: @meeseeks-background-color !important;
+	color: @meeseeks-text-color;
+	-webkit-box-shadow: inset 1px -2px 20px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 1px -2px 20px -6px rgba(0,0,0,0.75);
+	box-shadow: inset 1px -2px 20px -6px rgba(0,0,0,0.75);
+	padding: 10px;
+	overflow: hidden;
+	h4 {
+		font-size: 3rem;
+		font-weight: 100;
+		text-transform: none;
+		border: 0;
+		margin: 0;
+		padding: 0 0 10px;
+		line-height: 1;
+	}
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: inherit;
+		opacity: 0.7;
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	> .wrap {
+    	max-width: 900px;
+	}
+	.wrap--logo {
+		text-align: center;
+		a {
+			opacity: 1;
+		}
+		img {
+			width: 100%;
+    		max-width: 200px;
+    		transition: opacity 200ms ease;
+    		&:hover{
+    			opacity: 0.7;
+    		}
+		}
+	}
+	.wrap--notification {
+		&__receive {}
+		&__send {
+			input[type="text"]{
+				background: transparent;
+			    border: 0;
+			    padding: 15px 15px 15px 3px;
+			    color: white;
+    			width: 100%;
+    			transition: all 350ms ease;
+    			display: block;
+			    &:focus{
+			    	outline: 0;
+			    	background: rgba(0,0,0,0.3);
+			    	padding-left: 15px;
+			    	+ .options {
+			    		opacity: 1;
+			    		height: 50px;
+			    	}
+			    }
+			    + .options {
+			    	opacity: 0;
+			    	height: 0;
+			    	display: block;
+			    	transition: all 350ms ease;
+			    	overflow: hidden;
+			    	&:hover {
+			    		opacity: 1;
+			    		height: 50px;
+			    	}
+					label {
+						margin: 5px 5px 0 0;
+						padding: 10px 15px;
+						display: inline-block;
+						cursor: pointer;
+						background: @link-color-primary;
+						transition: opacity 350ms ease;
+						&:hover {
+							opacity: 0.6;
+						}
+					}
+			    }
+			}
+		}
+	}
+	.list--notification {
+		margin: 0;
+		list-style: none;
+		.action--restore {
+			display: none;
+		}
+		&__archive {
+			border-top: 1px solid rgba(255,255,255,0.1);
+			.action{
+				&--restore {
+					display: initial;
+				}
+				&--archive {
+					display: none;
+				}
+			}
+		}
+	}
+	.notification {
+		font-size: 1.4rem;
+		margin: 10px 0;
+		.action {
+			&--remove:hover { color: #F34A65; }
+			&--restore:hover { color: #0099FF; }
+			&--archive:hover { color: #66CC66; }
+		}
+	}
+	.action {
+		opacity: 0.2;
+		cursor: pointer;
+		transition: all 100ms ease;
+		.showonactive {
+			display: none;
+		}
+		&.active .hideonactive {
+			display: none;
+		}
+
+		&.active .showonactive {
+			display: inherit;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+@media only screen and (min-width: @query-mobile) {
+}
+
+@media only screen and (min-width: @query-tablet) {
+	.wrap--meeseeks {
+		.wrap--logo {
+			img {
+				max-width: initial;
+				height: 100px;
+				width: auto;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+	.wrap--meeseeks > .wrap {
+	    max-width: 1100px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,249 @@
+/**
+ * EVENTS MANAGER 
+ ***********************************/
+.wrap .em-booking {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+	margin: 0;
+	&-form {
+		flex: 1 0 calc(100% - 40px);
+		display: block;
+		position: static;
+		max-width: 100%;
+		p{
+		    width: 100%;
+		}
+		tr {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			margin: 0;
+			align-content: stretch;
+		}
+		th,
+		td {
+		    padding: 5px 0;
+		    flex: 1 1 100px;
+		}
+		th {
+			display: none;
+		}
+		.em-ticket + .em-ticket {
+			margin-top: 10px;
+		}
+		.em-bookings-ticket-table{
+			&-type {
+				flex: 1 1 200px;
+				font-weight: 700;
+				.ticket-desc {
+					font-weight: 300;
+				}
+			}
+			&-spaces {
+				flex: 1 1 100px;
+			}
+		}
+		input,
+		textarea,
+		select{
+			background: rgba(0,0,0,0.1);
+			padding: 5px;
+		}
+		select {
+			width: 100%;
+			background: rgba(0,0,0,0.1);
+			border: 0;
+			padding: 5px;
+		}
+		option {
+			padding: 5px 0;
+		}
+		.ticket-price,
+		.em-tickets-spaces {
+			margin: 10px 0;
+		}
+		.em-tickets-spaces {
+			display: flex;
+		    flex-wrap: wrap;
+		    flex-direction: row;
+			label,
+			select{
+				flex: 1 1 100px;
+			}
+		}
+
+		/* Bookings form details */
+		&-details {
+			padding: 0;
+			width: 100%;
+			p {
+			    display: flex;
+			    flex-wrap: wrap;
+			    flex-direction: row;
+				margin: 0;
+			}
+			label,
+			input,
+			select,
+			textarea {
+				flex: 1 0 100px;
+			}
+			label {
+				line-height: 32px;
+			}
+			input,
+			select,
+			textarea {
+				background: rgba(0,0,0,0.1);
+				border: 0;
+				padding: 5px;
+			}
+			.input-field-booking_comment,
+			.em-booking-buttons {
+				margin-top: 10px;
+			}
+
+			input[type="submit"]{
+			    width: 50%;
+			    display: block;
+			    margin: 0 0 0 50%;
+			    background-color: rgb(40,180,184);
+			}
+			.input-user-field,
+			.em-booking-gateway {
+			    display: flex;
+			    flex-wrap: wrap;
+			    flex-direction: row;
+				margin: 0;
+			}
+			.input-user-field + .input-user-field,
+			.em-booking-gateway {
+				margin-top: 10px;
+			}
+			.em-booking-gateway-form > img {
+				display: none;
+			}
+		}
+	}
+	/* Login if user is not */
+	.em-booking-login {
+	    flex: 1 0 calc(100% - 40px);
+	    padding: 0;
+	    border: 0;
+	    margin: 0;
+	    &-form {
+			p{
+				display: flex;
+			    flex-wrap: wrap;
+			    flex-direction: row;
+				margin: 0;
+			}
+
+			label{
+				flex: 1 0 50%;
+				line-height: 32px;
+			}
+
+			input[type="text"],
+			input[type="password"]{
+				flex: 1 0 50%;
+				background: rgba(0,0,0,0.1);
+			}
+			input[type="submit"]{
+			    display: block;
+			    margin-left: 50%;
+			    width: 50%;
+			}
+			a:last-of-type{
+				text-align: right;
+			    width: 50%;
+			    display: block;
+			    margin-left: 50%;
+			    font-size: 1rem;
+			    line-height: 1;
+			    margin-top: -10px;
+			}
+	    }
+	}
+	#em_rememberme,
+	#em_rememberme + label,
+	.input-dbem_fax {
+		display: none !important;
+	}
+}
+
+
+/* My Bookings */
+.em-my-bookings {
+	thead {
+		display: none;
+	}
+	th,
+	td {
+		flex: 1 0 100%;
+	}
+	tr {
+		display: flex;
+	    flex-wrap: wrap;
+	    flex-direction: row;
+		margin: 0;
+		td:first-of-type a{
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: black;
+			margin-top: 10px;
+		}
+	}
+	.em-bookings-cancel {
+		padding: 5px 0;
+		background: rgb(40,180,184);
+		color: white;
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin: 10px auto;
+		max-width: 260px;
+		&:hover {
+			background: rgb(34,153,155);
+		}
+	}
+}
+
+#em-wrapper > p:last-of-type {
+	display: none;
+}
+
+/* Bookings messages */
+.em-warning {
+	border-radius: 0;
+	margin: 0 0 20px;
+	border: 0;
+	p {
+		&:first-of-type{
+			margin-top: 0 !important;
+		}
+
+		&:last-of-type{
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+.em-booking .em-booking-message,
+.em-my-booking .em-booking-message,
+.statusnotice {
+	border: 0;
+	width: 100%;
+	border-radius: 0;
+}
+.em-booking .em-booking-message-error,
+.em-my-booking .em-booking-message-error,
+.em-warning-errors {
+	background-color:#F34A65;
+	p {
+		color: white;
+	}
+}
+
+

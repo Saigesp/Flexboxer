@@ -24,12 +24,53 @@
     pointer-events: all !important;
 }
 
+.fadein500 {
+    -webkit-animation: fadeIn500 0.7s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition: all 500ms ease-out;
+    pointer-events: all !important;
+}
+
+.fadeinup500 {
+    -webkit-animation: fadeInUp500 0.7s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-transition: all 500ms ease-out;
+    pointer-events: all !important;
+}
+
 @-webkit-keyframes fadeIn100 {
     from {
         margin-top: -50px;
+        opacity: 0;
     }
     to {
         margin-top: 0;
         opacity: 1;
     }
+}
+
+@-webkit-keyframes fadeIn500 {
+    from {
+        margin-top: -500px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+  
+}
+
+@-webkit-keyframes fadeInUp500 {
+    from {
+        margin-top: 500px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+  
 }

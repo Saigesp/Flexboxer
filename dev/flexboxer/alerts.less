@@ -1,3 +1,7 @@
+@alert-link-color-error: 		#78577d;
+@alert-link-color-success: 		#327344;
+@alert-link-color-warning: 		#ff6d3d;
+@alert-link-color-info: 		#4c6cd0;
 
 /**
  * ALERTS
@@ -5,10 +9,27 @@
 .wrap--alert {
 	color: white;
 	font-size: 1.6rem;
-	&__error { background: @alert-color-error !important;}
-	&__success { background: @alert-color-success !important;}
-	&__warning { background: @alert-color-warning !important;}
-	&__info { background: @alert-color-info !important;}
+	transition: all 350ms ease;
+	&__error {
+		color: @alert-text-color-error !important;
+		background: @alert-color-error !important;
+		a {color: @alert-link-color-error;}
+	}
+	&__success {
+		color: @alert-text-color-success !important;
+		background: @alert-color-success !important;
+		a {color: @alert-link-color-success;}
+	}
+	&__warning {
+		color: @alert-text-color-warning !important;
+		background: @alert-color-warning !important;
+		a {color: @alert-link-color-warning;}
+	}
+	&__info {
+		color: @alert-text-color-info !important;
+		background: @alert-color-info !important;
+		a {color: @alert-link-color-info;}
+	}
 	p {
 		margin: 0;
 		+ p {

@@ -56,6 +56,9 @@
 				}
 			}
 		}
+		> .wrap + .wrap {
+			margin-left: 5px;
+		}
 		&:nth-child(odd) {
 			background: @list-item-odd-background-color;
 		}
@@ -73,6 +76,25 @@
 		transition: opacity 200ms ease;
 		&:hover {
 			opacity: @list-icon-opacity-hover;
+		}
+	}
+	.wrap--buttons {
+		min-height: 40px;
+	}
+	.wrap--checkbox {
+		min-height: 40px;
+		height: 44px;
+		text-align: right;
+	}
+	.wrap--photo {
+		width: 44px;
+		height: 44px;
+		display: inline-block;
+		vertical-align: top;
+		img {
+			height: 100%;
+			width: auto;
+			display: block;
 		}
 	}
 	a {
@@ -99,6 +121,7 @@
 }
 
 @media only screen and (min-width: @query-tablet) {
+
 }
 
 @media only screen and (min-width: @query-desktop) {

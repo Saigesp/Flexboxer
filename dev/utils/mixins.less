@@ -153,3 +153,61 @@
 .hidden {
 	display: none !important;
 }
+
+.transparent {
+	opacity: 0 !important;
+}
+
+.wrap.invisible {
+	opacity: 0 !important;
+	height: 0 !important;
+	min-height: 0 !important;
+	pointer-events: none !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.untouchable {
+	pointer-events: none !important;
+}
+
+.js-showonload {
+	transition: opacity 2s ease;
+}
+.js-thumbnail-upload{
+	transition: opacity 300ms ease;
+}
+.js-showonload-active {
+	opacity: 0 !important;
+	height: 0 !important;
+	pointer-events: none !important;
+	min-height: 0 !important;
+	margin: 0 !important;
+
+}
+
+@media only screen and (max-width: @query-mobile) {
+	.hideonmobile {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: @query-tablet) {
+	.showontablet {
+		display: none !important;
+	}
+}
+@media only screen and (min-width: @query-tablet) {
+	.hideontablet {
+		display: none !important;
+	}
+}
+	
+
+@media only screen and (min-width: @query-desktop) {
+	.hideondesktop {
+		display: none !important;
+	}
+}

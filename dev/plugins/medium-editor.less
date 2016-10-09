@@ -1,0 +1,72 @@
+/**
+ * MEDIUM EDITOR
+ ***********************************/
+
+textarea.js-medium-editor,
+.medium-editor-hidden {
+	display: none !important;
+}
+
+.wp-editor-area {
+	padding: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.8;
+	min-height: 120px;
+	background-color: rgba(0,0,0,0.1);
+	p {
+		margin: 10px 0;
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.js-medium-editor {
+	padding: 10px;
+	background-color: rgba(0,0,0,0.1);
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.medium-editor {
+	&-placeholder {
+		padding: 10px;
+		color: black;
+		background-color: rgba(0,0,0,0.1);
+		width: 100%;
+		&:after {
+			color: black;
+			font-family: 'Open Sans', sans-serif;
+			font-style: normal;
+		}
+	}
+	&-toolbar {
+		li button {
+			background-color: rgb(40,180,184);
+			border-right: 1;
+			&:hover {
+				background-color: rgb(34,153,155);
+			}
+		}
+		&-arrow-under:after {
+			border-color: rgb(40,180,184) transparent transparent
+		}
+		&-form a {
+			color: black;
+			font-family: 'Open Sans', sans-serif;
+			font-style: normal;
+		}
+	}
+
+}
+
+
+
+
+
+
+

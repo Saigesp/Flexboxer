@@ -37,45 +37,45 @@ button {
 		}
 	}
 }
-
-.button {
-	#basicbutton;
-	padding: 5px 12px;
-	transition: all 200ms ease;
-	&:hover{
-		background-color: rgb(34,153,155);
-		color: white;
-	}
-	&:focus {
-		color: rgba(255,255,255,0.8);
-		outline: 0;
-	}
-	&:active {
-		border-bottom-width: 1px;
-		margin-top: 4px;
-		min-height: 46px;
-	}
-	&:disabled {
-		opacity: 0.4;
-		cursor: default;
-	}
-	&--secondary {
+.wrap{
+	.button {
 		#basicbutton;
-		background: @button-color-secondary;
-		border-color: @button-shadow-secondary;
-		color: @button-text-secondary;
-	    text-decoration: none;
-	    text-shadow: none;
+		padding: 5px 12px;
+		transition: all 200ms ease;
 		&:hover{
-			background: @button-hover-secondary;
+			background-color: #4ead82;
 			color: white;
 		}
 		&:focus {
 			color: rgba(255,255,255,0.8);
+			outline: 0;
+		}
+		&:active {
+			border-bottom-width: 1px;
+			margin-top: 4px;
+			min-height: 46px;
+		}
+		&:disabled {
+			opacity: 0.4;
+			cursor: default;
+		}
+		&--secondary {
+			#basicbutton;
+			background: @button-color-secondary;
+			border-color: @button-shadow-secondary;
+			color: @button-text-secondary;
+		    text-decoration: none;
+		    text-shadow: none;
+			&:hover{
+				background: @button-hover-secondary;
+				color: white;
+			}
+			&:focus {
+				color: rgba(255,255,255,0.8);
+			}
 		}
 	}
 }
-
 .additem {
 	&--fullwidth {
 		width: 100%;

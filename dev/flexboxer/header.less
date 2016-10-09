@@ -5,13 +5,18 @@
 	height: @header-height;
 	position: relative;
 	z-index: 999;
+	background-color: @header-color;
 	.wrap--frame {
 		margin: 0 auto !important;
+		flex: 1 1 auto;
 	}
 	.logo {
 		display: inline-block;
 		vertical-align: top;
 		height: @header-height;
+	}
+	.wrap--pagetitle {
+		display: inline-block;
 	}
 	.title {
 		margin: 0;
@@ -23,13 +28,17 @@
 		line-height: @header-height;
 	}
 	.menu {
+		display: inline-block;
 		li {
 			line-height: @header-height;
 			display: inline-block;
 			a {
-				color: white;
+				color: @header-link-color;
+				line-height: @header-height;
+    			display: block;
+    			padding: 0 10px;
 				&:hover {
-					color: #CCC;
+					color: @header-link-hover;
 				}
 			}
 			+ li {
@@ -129,6 +138,9 @@
 			margin: 0;
 	    	line-height: @header-height-desktop;
 		}
+		.title {
+    		line-height: @header-height-desktop;
+    	}
 		.logo {
 			margin-left: @header-height-desktop;
 			height: @header-height-desktop;
@@ -140,6 +152,9 @@
 		.menu {
 			li {
 				line-height: @header-height-desktop;
+				a {
+					line-height: @header-height-desktop;
+				}
 			}
 		}
 		.icon {

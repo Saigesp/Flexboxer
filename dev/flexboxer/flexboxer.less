@@ -32,19 +32,10 @@ body {
 	color: white;
 }
 
-#navleft {
-	background: @menu-color;
-}
-
-#main .flexboxer > .wrap {
-    background: @sections-color;
-}
-
-
 .flexboxer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
@@ -62,7 +53,10 @@ body {
     }
     .wrap {
 		> h1:first-of-type,
-		> h2:first-of-type {
+		> h2:first-of-type,
+		> h3:first-of-type,
+		> h4:first-of-type,
+		> h5:first-of-type {
 			margin-top: 0;
 		}
     	&--flex {
@@ -84,7 +78,8 @@ body {
 		    flex: 1 1 100%;
 		    margin: 10px auto;
 			&__decimal { flex: 1 1 10%; }
-			&__85    { flex: 0 1 100px; }
+			&__45    { flex: 0 1  45px; }
+			&__85    { flex: 0 1  85px; }
 			&__100   { flex: 0 1 100px; }
 			&__150   { flex: 0 1 150px; }
 		}
@@ -106,6 +101,11 @@ body {
 			&__bottom {
 				margin-top: 0 !important;
 			}
+		}
+		&--box {
+			margin: 30px auto !important;
+			max-width: 600px !important;
+			
 		}
 		&--controls {
 			line-height: 1;
@@ -148,6 +148,8 @@ body {
 		}
     }
 	> .wrap {
+		width: 100%;
+		box-sizing: border-box;
 	    margin-top: 10px;
 	    margin-bottom: 10px;
 	    position: relative;
@@ -204,6 +206,7 @@ body {
 			}
 			&.active {
 				height: auto;
+				overflow: normal !important;
 				> h3 {
 					&:first-of-type {
 						margin-bottom: 12px;
@@ -231,6 +234,10 @@ body {
 
 .wrap--content.wrap--vertical {
 		margin: 0 auto;
+}
+
+.wrap--transparent {
+	background: transparent !important;
 }
 
 /**
@@ -263,6 +270,54 @@ body {
 			    flex: 1 1  ~"calc(33% - @{wrap-content-padding}/2)";
 	    	}
 		}
+		.wrap--frame__fourth {
+	    	flex: 1 1 25%;
+	    	+ .wrap--frame__fourth {
+			    flex: 1 1  ~"calc(25% - @{wrap-content-padding}/2)";
+	    	}
+		}
+		.wrap--content__fourth {
+	    	flex: 1 1 ~"calc(25% - @{wrap-content-padding}*2)";
+	    	+ .wrap--content__fourth {
+			    flex: 1 1  ~"calc(25% - @{wrap-content-padding}/2)";
+	    	}
+		}
+		.wrap--frame__fifth {
+	    	flex: 1 1 20%;
+	    	+ .wrap--frame__fifth {
+			    flex: 1 1  ~"calc(20% - @{wrap-content-padding}/2)";
+	    	}
+		}
+		.wrap--content__fifth {
+	    	flex: 1 1 ~"calc(20% - @{wrap-content-padding}*2)";
+	    	+ .wrap--content__fifth {
+			    flex: 1 1  ~"calc(20% - @{wrap-content-padding}/2)";
+	    	}
+		}
+		.wrap--frame__threequart {
+	    	flex: 1 1 75%;
+	    	+ .wrap--frame__threequart {
+			    flex: 1 1  ~"calc(75% - @{wrap-content-padding}/2)";
+	    	}
+		}
+		.wrap--content__threequart {
+	    	flex: 1 1 ~"calc(75% - @{wrap-content-padding}*2)";
+	    	+ .wrap--content__threequart {
+			    flex: 1 1  ~"calc(75% - @{wrap-content-padding}/2)";
+	    	}
+		}
+		.wrap--frame__twothird {
+	    	flex: 1 1 66%;
+	    	+ .wrap--frame__twothird {
+			    flex: 1 1  ~"calc(66% - @{wrap-content-padding}/2)";
+	    	}
+		}
+		.wrap--content__twothird {
+	    	flex: 1 1 ~"calc(66% - @{wrap-content-padding}*2)";
+	    	+ .wrap--content__twothird {
+			    flex: 1 1  ~"calc(66% - @{wrap-content-padding}/2)";
+	    	}
+		}
 	}
 
 }
@@ -288,14 +343,14 @@ body {
 			    }
 				&__fullwidth {
 					width: 100%;
-					max-width: ~"calc(100% - @{wrap-content-padding}*3)";
+					max-width: 100%;
 				}
 			    &.wrap--vertical {
 			    	margin: 0 auto;
 			    }
 			}
 			&--frame {
-			    margin: 10px auto;
+			    margin: 0 auto;
 			    &.wrap--vertical {
 			    	margin: 0 auto;
 			    }
@@ -304,9 +359,7 @@ body {
 		> .wrap:first-child{
 			margin-top: 20px;
 		}
-		> .wrap--content {
-		    max-width: ~"calc(900px - @{wrap-content-padding}*2)";
-		}
+		> .wrap--content,
 		> .wrap--frame,
 		> .wrap--content__toframe{
 		    max-width: 900px;
@@ -325,10 +378,6 @@ body {
 }
 
 @media only screen and (min-width: @query-desktop) {
-	body {
-		background: @menu-color;
-	}
-
 	.flexboxer {
 		.wrap--controls {
 			position: absolute;
@@ -364,9 +413,7 @@ body {
 
 @media only screen and (min-width: @query-fullscreen) {
 	.flexboxer{
-		> .wrap--content {
-		    max-width: ~"calc(1100px - @{wrap-content-padding}*2)";
-		}
+		> .wrap--content,
 		> .wrap--frame,
 		> .wrap--content__toframe{
 		    max-width: 1100px;

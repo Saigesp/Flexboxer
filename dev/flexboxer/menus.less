@@ -1,9 +1,13 @@
+@menu-top-color: 		white;
+@menu-frame-color: 		#545454;
+
+
  /**
  * MENUS
  ***********************************/
 .menu {
 	&--top {
-		background: @menu-color;
+		background: @menu-background-color;
 		width: 100%;
 		height: 0;
 		padding-top: 0;
@@ -20,7 +24,7 @@
 			padding: 0 30px;
 			margin-top: 30px;
 			li {
-				color: white;
+				color: @menu-top-color;
 				a {
 					display: block;
 					padding: 15px;
@@ -105,6 +109,20 @@
 					&:hover {
 						opacity: 1;
 					}
+				}
+			}
+		}
+	}
+	&--frame {
+		p {
+			margin: 0;
+			font-size: small;
+			line-height: 1.6;
+			color: @menu-frame-color;
+			a {
+				color: inherit;
+				&.active {
+					font-weight: 900;
 				}
 			}
 		}

@@ -3,33 +3,62 @@
  ***********************************/
 .wrap--modal {
     position: absolute !important;
-    top: 15%;
-    left: 15%;
-    width: ~"calc(70% - 30px)";
-    min-height: 200px;
+    left: 0;
+    top: 60px;
+    width: 100%;
     min-width: 200px;
-    padding: 15px;
+    padding: @wrap-content-padding;
     margin: 0 !important;
 	box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.5);
-	transition: all 350px ease;
+	transition: all 350ms ease;
     opacity: 0;
     border-radius: 1px;
     z-index: 9999;
     font-size: 1.6rem;
     pointer-events: none !important;
     background-color: @sections-color;
+    box-sizing: border-box;
     &.active{
-	    -webkit-animation: fadeIn100 0.7s;
-	    -webkit-animation-iteration-count: 1;
-	    -webkit-animation-fill-mode: forwards;
-	    -webkit-transition: all 500ms ease-out;
+        .animation (fadeIn500, 500ms);
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-transition: all 500ms ease-out;
 	    pointer-events: all !important;
-	    opacity: 1;
+        opacity: 1;
     }
     h3:first-of-type {
     	margin-top: 0;
     }
-    input[type="submit"] {
-	    float: right;
-	}
+}
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+
+@media only screen and (min-width: @query-mobile) {
+    .wrap--modal {
+        left: 10%;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: @query-tablet) {
+    .wrap--modal {
+        top: 100px;
+        left: 25%;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: @query-desktop) {
+    .wrap--modal {
+        top: 140px;
+        left: ~"calc(50% - 200px)";
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
 }
